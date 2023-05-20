@@ -41,11 +41,6 @@ namespace Settings
             mainMenuUI.SetActive(true);
             CloseSettings();
         }
-
-        public void BackToGame()
-        {
-            CloseSettings();
-        }
         
         private void CloseSettings()
         {
