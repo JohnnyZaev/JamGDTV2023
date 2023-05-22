@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -32,7 +31,7 @@ public class WorkShops : MonoBehaviour
     }
 
 
-    // Delete After Adding OnWorkShopChanged Event is Assigned
+    // Delete when OnWorkShopChanged Event is Assigned
     public void Test()
     {
         Debug.Log("lol");
