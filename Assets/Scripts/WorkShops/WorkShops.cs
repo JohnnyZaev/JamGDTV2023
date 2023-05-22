@@ -1,24 +1,20 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class WorkShops : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> workshops;
     [SerializeField] private UnityEvent onWorkshopChanged;
+    private GameObject[] _workshops;
     private GameObject _activeWorkshop;
+    private int index = 0;
     void Start()
     {
-        workshops = new List<GameObject>();
-
+        _workshops = new GameObject[gameObject.transform.childCount];
         foreach(Transform child in transform)
         {
-            if (child.tag == "WorkShop")
-            {
-                workshops.Add(child.gameObject);
-            }
+            _workshops[index++] = child.gameObject;
         }
-        _activeWorkshop = workshops[0];
+        _activeWorkshop = _workshops[0];
         _activeWorkshop.SetActive(true);
     }
 
@@ -26,7 +22,7 @@ public class WorkShops : MonoBehaviour
     {
         onWorkshopChanged.Invoke();
         _activeWorkshop?.SetActive(false);
-        _activeWorkshop = workshops[index];
+        _activeWorkshop = _workshops[index];
         _activeWorkshop.SetActive(true);
     }
 

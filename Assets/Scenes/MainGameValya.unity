@@ -3655,7 +3655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a59a455741a52a4daf24f9e893c9a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workshops: []
   onWorkshopChanged:
     m_PersistentCalls:
       m_Calls:
