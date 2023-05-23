@@ -10,8 +10,12 @@ public class GameInfo : MonoBehaviour
     [SerializeField] private int maxSparkles;
     [SerializeField] private float goodEndingSparkles;
     [SerializeField] private UnityEvent allSparklesCollected;
+    [SerializeField] private UnityEvent endGame;
+    [SerializeField] private int _maxLevels;
     private bool _isTimerStarted = false;
     private int _sparklesCounter;
+    private int _levelsCompleted = 0;
+
 
     private TextMeshProUGUI TimerTextField { get { return timerTextField; } }
     public int SparklesCounter
@@ -34,6 +38,17 @@ public class GameInfo : MonoBehaviour
             timerStart -= Time.deltaTime;
             TimerTextField.text = Mathf.Round(timerStart).ToString();
         }
+
+        if (SparklesCounter == maxSparkles)
+        {
+            allSparklesCollected.Invoke();
+            _levelsCompleted++;
+        }
+
+        if (_levelsCompleted == _maxLevels)
+        {
+            endGame.Invoke();
+        }
     }
 
     public void StartTimer()
@@ -51,11 +66,6 @@ public class GameInfo : MonoBehaviour
         if (SparklesCounter != maxSparkles)
         {
             SparklesCounter++;
-        }
-
-        if (SparklesCounter == maxSparkles)
-        {
-            allSparklesCollected.Invoke();
         }
     }
 }
