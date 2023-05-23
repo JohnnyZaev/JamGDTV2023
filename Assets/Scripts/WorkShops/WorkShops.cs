@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,7 @@ public class WorkShops : MonoBehaviour
         }
         _activeWorkshop = _workshops[0];
         _activeWorkshop.SetActive(true);
+        List<int> list = new List<int>();
     }
 
     public void ChangeWorkShop(int index)
@@ -30,7 +32,6 @@ public class WorkShops : MonoBehaviour
     // Delete when OnWorkShopChanged Event is Assigned
     public void Test()
     {
-        Debug.Log("lol");
     }
 
     
