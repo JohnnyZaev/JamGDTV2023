@@ -5,7 +5,8 @@ using UnityEngine.Events;
 public class GameInfo : MonoBehaviour
 {
     // Added new variable, due to inability of properties to show up in Editor, so property is linked to the variable from the editor
-    public int _levelsCompleted = 0;
+    [HideInInspector]
+    public int levelsCompleted = 0;
     [SerializeField] private TextMeshProUGUI timerTextField;
     [SerializeField] private float timerStart;
     [SerializeField] private float goodEndingSparkles;
@@ -55,9 +56,9 @@ public class GameInfo : MonoBehaviour
 
     public void LevelCompleted()
     {
-        _levelsCompleted++;
+        levelsCompleted++;
 
-        if (_levelsCompleted == maxLevels)
+        if (levelsCompleted == maxLevels)
         {
             onEndGame.Invoke();
         }
