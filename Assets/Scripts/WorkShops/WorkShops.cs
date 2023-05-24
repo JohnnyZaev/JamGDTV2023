@@ -1,31 +1,29 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class WorkShops : MonoBehaviour
 {
     [SerializeField] private UnityEvent onWorkshopChanged;
-    private GameObject[] _workshops;
-    private GameObject _activeWorkshop;
+    [SerializeField] private WorkShop[] _workshops;
+    private WorkShop _activeWorkshop;
     private int index = 0;
     void Start()
     {
-        _workshops = new GameObject[gameObject.transform.childCount];
+        _workshops = new WorkShop[gameObject.transform.childCount];
         foreach(Transform child in transform)
         {
-            _workshops[index++] = child.gameObject;
+            _workshops[index++] = child.GetComponent<WorkShop>();
         }
         _activeWorkshop = _workshops[0];
-        _activeWorkshop.SetActive(true);
-        List<int> list = new List<int>();
+        _activeWorkshop.gameObject.SetActive(true);
     }
 
     public void ChangeWorkShop(int index)
     {
         onWorkshopChanged.Invoke();
-        _activeWorkshop?.SetActive(false);
+        _activeWorkshop?.gameObject.SetActive(false);
         _activeWorkshop = _workshops[index];
-        _activeWorkshop.SetActive(true);
+        _activeWorkshop.gameObject.SetActive(true);
     }
 
 

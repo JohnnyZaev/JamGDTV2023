@@ -5,19 +5,15 @@ using UnityEngine.Events;
 public class GameInfo : MonoBehaviour
 {
     // Added new variable, due to inability of properties to show up in Editor, so property is linked to the variable from the editor
-    [SerializeField] private TextMeshProUGUI timerTextField; 
+    public int _levelsCompleted = 0;
+    [SerializeField] private TextMeshProUGUI timerTextField;
     [SerializeField] private float timerStart;
-    [SerializeField] private int maxSparkles;
     [SerializeField] private float goodEndingSparkles;
-    [SerializeField] private UnityEvent allSparklesCollected;
-    [SerializeField] private UnityEvent endGame;
-    [SerializeField] private int _maxLevels;
+    [SerializeField] private UnityEvent onEndGame;
+    [SerializeField] private int maxLevels;
     private bool _isTimerStarted = false;
     private int _sparklesCounter;
-    private int _levelsCompleted = 0;
-
-
-    private TextMeshProUGUI TimerTextField { get { return timerTextField; } }
+    public float TimerStart { get { return timerStart; } private set { TimerStart = value; } }
     public int SparklesCounter
     {
         get
@@ -35,22 +31,12 @@ public class GameInfo : MonoBehaviour
     {
         if (_isTimerStarted)
         {
-            timerStart -= Time.deltaTime;
-            TimerTextField.text = Mathf.Round(timerStart).ToString();
-        }
-
-        if (SparklesCounter == maxSparkles)
-        {
-            allSparklesCollected.Invoke();
-            _levelsCompleted++;
-        }
-
-        if (_levelsCompleted == _maxLevels)
-        {
-            endGame.Invoke();
+            TimerStart -= Time.deltaTime;
+            timerTextField.text = Mathf.Round(timerStart).ToString();
         }
     }
 
+    #region Start/Stop Timer functions
     public void StartTimer()
     {
         _isTimerStarted = true;
@@ -61,11 +47,19 @@ public class GameInfo : MonoBehaviour
         _isTimerStarted = false;
     }
 
+    #endregion
     public void SparklesAdded()
     {
-        if (SparklesCounter != maxSparkles)
+        SparklesCounter++;
+    }
+
+    public void LevelCompleted()
+    {
+        _levelsCompleted++;
+
+        if (_levelsCompleted == maxLevels)
         {
-            SparklesCounter++;
+            onEndGame.Invoke();
         }
     }
 }

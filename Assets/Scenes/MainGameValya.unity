@@ -362,7 +362,8 @@ GameObject:
   - component: {fileID: 174625316}
   - component: {fileID: 174625315}
   - component: {fileID: 174625314}
-  m_Layer: 0
+  - component: {fileID: 174625317}
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,6 +448,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174625312}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &174625317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174625312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1081464881}
+        m_TargetAssemblyTypeName: WorkShop, Assembly-CSharp
+        m_MethodName: AddSparkles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &175953621
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175953622}
+  - component: {fileID: 175953623}
   m_Layer: 0
   m_Name: WorkShop1
   m_TagString: WorkShop
@@ -479,6 +508,34 @@ Transform:
   m_Father: {fileID: 2059186984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &175953623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175953621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSparkles: 3
+  onSparklesCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 274499487}
+        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
+        m_MethodName: LevelCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &180039054
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,13 +735,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db753e70a0a9992499d15b7234012763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelsCompleted: 0
   timerTextField: {fileID: 233903952}
   timerStart: 60
-  maxSparkles: 0
   goodEndingSparkles: 0
-  allSparklesCollected:
+  onEndGame:
     m_PersistentCalls:
       m_Calls: []
+  maxLevels: 4
 --- !u!4 &274499488
 Transform:
   m_ObjectHideFlags: 0
@@ -1800,7 +1858,8 @@ GameObject:
   - component: {fileID: 899258068}
   - component: {fileID: 899258067}
   - component: {fileID: 899258066}
-  m_Layer: 0
+  - component: {fileID: 899258069}
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1886,6 +1945,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899258064}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &899258069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899258064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1398910465}
+        m_TargetAssemblyTypeName: WorkShop, Assembly-CSharp
+        m_MethodName: AddSparkles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1081464879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,6 +1981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1081464880}
+  - component: {fileID: 1081464881}
   m_Layer: 0
   m_Name: WorkShop2
   m_TagString: WorkShop
@@ -1918,6 +2005,34 @@ Transform:
   m_Father: {fileID: 2059186984}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081464881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081464879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSparkles: 2
+  onSparklesCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 274499487}
+        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
+        m_MethodName: LevelCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1086153462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398910464}
+  - component: {fileID: 1398910465}
   m_Layer: 0
   m_Name: WorkShop3
   m_TagString: WorkShop
@@ -2374,6 +2490,34 @@ Transform:
   m_Father: {fileID: 2059186984}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398910465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398910463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSparkles: 1
+  onSparklesCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 274499487}
+        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
+        m_MethodName: LevelCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1406959028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2606,8 @@ GameObject:
   - component: {fileID: 1412204542}
   - component: {fileID: 1412204541}
   - component: {fileID: 1412204540}
-  m_Layer: 0
+  - component: {fileID: 1412204543}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2547,6 +2692,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412204538}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1412204543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412204538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 175953623}
+        m_TargetAssemblyTypeName: WorkShop, Assembly-CSharp
+        m_MethodName: AddSparkles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1500133597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2866,8 @@ GameObject:
   - component: {fileID: 1619058611}
   - component: {fileID: 1619058610}
   - component: {fileID: 1619058609}
-  m_Layer: 0
+  - component: {fileID: 1619058612}
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2780,6 +2953,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619058607}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1619058612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619058607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1966794407}
+        m_TargetAssemblyTypeName: WorkShop, Assembly-CSharp
+        m_MethodName: AddSparkles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1635571293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3256,6 +3456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1966794406}
+  - component: {fileID: 1966794407}
   m_Layer: 0
   m_Name: WorkShop4
   m_TagString: WorkShop
@@ -3279,6 +3480,34 @@ Transform:
   m_Father: {fileID: 2059186984}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966794407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966794405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSparkles: 4
+  onSparklesCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 274499487}
+        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
+        m_MethodName: LevelCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2059186982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,6 +3552,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _workshops: []
 --- !u!4 &2059186984
 Transform:
   m_ObjectHideFlags: 0
