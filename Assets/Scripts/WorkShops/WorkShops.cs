@@ -4,17 +4,17 @@ using UnityEngine.Events;
 public class WorkShops : MonoBehaviour
 {
     [SerializeField] private UnityEvent onWorkshopChanged;
-    [SerializeField] private WorkShop[] workshops;
+    private WorkShop[] _workshops;
     private WorkShop _activeWorkshop;
     private int index = 0;
     void Start()
     {
-        workshops = new WorkShop[gameObject.transform.childCount];
+        _workshops = new WorkShop[gameObject.transform.childCount];
         foreach(Transform child in transform)
         {
-            workshops[index++] = child.GetComponent<WorkShop>();
+            _workshops[index++] = child.GetComponent<WorkShop>();
         }
-        _activeWorkshop = workshops[0];
+        _activeWorkshop = _workshops[0];
         _activeWorkshop.gameObject.SetActive(true);
     }
 
@@ -22,7 +22,7 @@ public class WorkShops : MonoBehaviour
     {
         onWorkshopChanged.Invoke();
         _activeWorkshop?.gameObject.SetActive(false);
-        _activeWorkshop = workshops[index];
+        _activeWorkshop = _workshops[index];
         _activeWorkshop.gameObject.SetActive(true);
     }
 

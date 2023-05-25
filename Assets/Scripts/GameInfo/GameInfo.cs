@@ -5,8 +5,7 @@ using UnityEngine.Events;
 public class GameInfo : MonoBehaviour
 {
     // Added new variable, due to inability of properties to show up in Editor, so property is linked to the variable from the editor
-    [HideInInspector]
-    public int levelsCompleted = 0;
+    [HideInInspector] public int levelsCompleted = 0;
     [SerializeField] private TextMeshProUGUI timerTextField;
     [SerializeField] private float timerStart;
     [SerializeField] private float goodEndingSparkles;
@@ -14,7 +13,7 @@ public class GameInfo : MonoBehaviour
     [SerializeField] private int maxLevels;
     private bool _isTimerStarted = false;
     private int _sparklesCounter;
-    public float TimerStart { get { return timerStart; } private set { TimerStart = value; } }
+    public float TimerStart { get { return timerStart; } private set { timerStart = value; } }
     public int SparklesCounter
     {
         get
@@ -27,17 +26,15 @@ public class GameInfo : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_isTimerStarted)
         {
             TimerStart -= Time.deltaTime;
-            timerTextField.text = Mathf.Round(timerStart).ToString();
+            timerTextField.text = Mathf.Round(TimerStart).ToString();
         }
     }
 
-    #region Start/Stop Timer functions
     public void StartTimer()
     {
         _isTimerStarted = true;
@@ -48,7 +45,6 @@ public class GameInfo : MonoBehaviour
         _isTimerStarted = false;
     }
 
-    #endregion
     public void SparklesAdded()
     {
         SparklesCounter++;
