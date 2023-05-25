@@ -2,8 +2,11 @@ using System;
 
 namespace Utility
 {
+    
+    public interface IOptionalValue { }
+    
     [Serializable]
-    public struct OptionalValue<T>
+    public struct OptionalValue<T> : IOptionalValue
     {
         public bool hasValue;
         public T value;
