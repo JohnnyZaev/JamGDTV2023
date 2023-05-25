@@ -29,6 +29,16 @@ namespace Dialogue
             _fullScreenTextImage = fullScreenTextObject.GetComponent<Image>();
         }
 
+        private void Update()
+        {
+            if (!_isDialogueRunning)
+                return;
+            if (InputManager.Instance.LeftMouseButtonInput)
+            {
+                _isClicked = true;
+            }
+        }
+
         public void StartDialogue(DialogueBase dialogue)
         {
             if (dialogue.isBubbleType)
@@ -45,6 +55,7 @@ namespace Dialogue
         {
             if (_isDialogueRunning)
                 yield break;
+            _isClicked = false;
             _isDialogueRunning = true;
             _fullScreenTextImage.color = dialogue.backgroundColor;
             fullScreenTextField.color = dialogue.textColor;
@@ -56,14 +67,13 @@ namespace Dialogue
                 foreach (var c in dialogue.text.ToCharArray())
                 {
                     fullScreenTextField.text += c;
-                    // MAYBE WILL FIX THIS
-                    // if (InputManager.Instance.LeftMouseButtonInput)
-                    // {
-                    //     fullScreenTextField.text = dialogue.text;
-                    //     Debug.Log("Pressed");
-                    //     yield return new WaitForSecondsRealtime(0.5f);
-                    //     break;
-                    // }
+                    if (_isClicked)
+                    {
+                        fullScreenTextField.text = dialogue.text;
+                        _isClicked = false;
+                        yield return new WaitForSecondsRealtime(0.5f);
+                        break;
+                    }
                     yield return waitTime;
                 }
             }
