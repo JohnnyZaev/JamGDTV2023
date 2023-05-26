@@ -2,7 +2,6 @@ using System;
 
 namespace Utility
 {
-    
     public interface IOptionalValue { }
     
     [Serializable]
