@@ -1,33 +1,36 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WorkShop : MonoBehaviour
+namespace Workshops
 {
-    [SerializeField] private int maxSparkles;
-    [SerializeField] private UnityEvent onSparklesCollected;
-    private int _currentSparkles;
-
-    public int CurrentSparkles
+    public class WorkShop : MonoBehaviour
     {
-        get
-        {
-            return _currentSparkles;
-        }
-        set
-        {
-            _currentSparkles += 1;
-        }
-    }
+        [SerializeField] private int maxSparkles;
+        [SerializeField] private UnityEvent onSparklesCollected;
+        private int _currentSparkles;
 
-    public void AddSparkles()
-    {
-        if (CurrentSparkles < maxSparkles)
+        public int CurrentSparkles
         {
-            CurrentSparkles++;
-
-            if (CurrentSparkles == maxSparkles)
+            get
             {
-                onSparklesCollected.Invoke();
+                return _currentSparkles;
+            }
+            set
+            {
+                _currentSparkles += 1;
+            }
+        }
+
+        public void AddSparkles()
+        {
+            if (CurrentSparkles < maxSparkles)
+            {
+                CurrentSparkles++;
+
+                if (CurrentSparkles == maxSparkles)
+                {
+                    onSparklesCollected.Invoke();
+                }
             }
         }
     }
