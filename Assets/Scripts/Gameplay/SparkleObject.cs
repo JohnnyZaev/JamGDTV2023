@@ -8,10 +8,10 @@ namespace Gameplay
 {
     public class SparkleObject : InteractableObject
     {
+        [SerializeField] private bool isActive = true;
+        [Restrict(typeof(IPuzzle))][SerializeField] private GameObject puzzle;
         public UnityEvent OnSuccess;
         public UnityEvent OnFailure;
-        [SerializeField] private bool isActive = true;
-        [Restrict(typeof(IPuzzle))] [SerializeField] private GameObject puzzle;
         private IPuzzle _puzzle;
 
         private void Awake()
@@ -27,9 +27,9 @@ namespace Gameplay
             _puzzle.Start();
         }
 
-        public void SetActive(bool isActive)
+        public void NewIsActive(bool newIsActive)
         {
-            this.isActive = isActive;
+            isActive = newIsActive;
         }
     }
 }

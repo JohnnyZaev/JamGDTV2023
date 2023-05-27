@@ -11,10 +11,7 @@ namespace Workshops
 
         public int CurrentSparkles
         {
-            get
-            {
-                return _currentSparkles;
-            }
+            get => _currentSparkles;
             set
             {
                 _currentSparkles += 1;
