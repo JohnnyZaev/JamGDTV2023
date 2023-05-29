@@ -3738,6 +3738,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 725387664614603213, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 725387664614603213, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1062585847673771636, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
       propertyPath: m_Controller
@@ -3903,6 +3913,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 274499487}
+    - target: {fileID: 7396737868003666744, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: workShops
+      value: 
+      objectReference: {fileID: 2059186983}
     - target: {fileID: 7396737868003666744, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
       propertyPath: _workShops
