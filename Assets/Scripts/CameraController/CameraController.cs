@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -9,6 +10,7 @@ namespace CameraController
     {
         [SerializeField] private Volume blur;
         [SerializeField] private Camera blurCamera;
+        [SerializeField] CamerSettings cameraOriginPostion;
         private float _zoomSpeed = 1f;
         private float cameraSpeed = 4f;
         private Camera _camera;
@@ -20,6 +22,7 @@ namespace CameraController
             _camera = Camera.main;
             _targretPosition = transform.position;
             _targretZoom = _camera.orthographicSize;
+            cameraOriginPostion.zoom = _camera.orthographicSize;
         }
         void Update()
         {
