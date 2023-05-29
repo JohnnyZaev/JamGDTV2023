@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace Player
 {
-    public class PlayerAppearance : MonoBehaviour
+    public class SparkleManager : MonoBehaviour
     {
         [SerializeField] private float maxEmission = 3;
         [SerializeField] private int maxSparkles = 3;
@@ -42,10 +42,9 @@ namespace Player
             }
         }
 
-        public void TestAddSparkle() // TODO: Remove test function
+        public void AddSparkle()
         {
             Sparkles += 1;
-            Debug.Log("Test ");
         }
 
         private void Awake()

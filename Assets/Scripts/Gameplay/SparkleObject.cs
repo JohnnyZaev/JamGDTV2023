@@ -27,7 +27,7 @@ namespace Gameplay
             _interaction.Start();
         }
 
-        public void NewIsActive(bool newIsActive)
+        public void IsActive(bool newIsActive)
         {
             isActive = newIsActive;
         }
