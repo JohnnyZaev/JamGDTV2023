@@ -2433,6 +2433,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 526834171, guid: 1ad6f9aa82b4b2548b87fea0383cee15, type: 3}
+      propertyPath: cameraOriginPostion
+      value: 
+      objectReference: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+        type: 2}
     - target: {fileID: 3958365069670102710, guid: 1ad6f9aa82b4b2548b87fea0383cee15,
         type: 3}
       propertyPath: m_ClearFlags

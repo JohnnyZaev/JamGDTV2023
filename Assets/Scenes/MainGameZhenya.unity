@@ -2876,6 +2876,7 @@ MonoBehaviour:
   bubbleUIPosition: {fileID: 1803214977}
   maxXPositionForBubble: 0
   waitTimeAfterDialogue: 0.5
+  bubblePosOffset: {x: 0, y: 0, z: 0}
   starterDialogue: {fileID: 0}
 --- !u!4 &1811698598
 Transform:
