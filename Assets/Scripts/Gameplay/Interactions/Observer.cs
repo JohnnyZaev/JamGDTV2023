@@ -59,7 +59,6 @@ namespace Gameplay.Interactions
             {
                 OnSuccess.Invoke();
             }
-
             if (_dialogueStage < dialogue.Length - 1)
             {
                 ++_dialogueStage;
