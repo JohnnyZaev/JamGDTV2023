@@ -1,4 +1,4 @@
-using Puzzles;
+using Gameplay.Interactions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -9,22 +9,22 @@ namespace Gameplay
     public class SparkleObject : InteractableObject
     {
         [SerializeField] private bool isActive = true;
-        [Restrict(typeof(IPuzzle))][SerializeField] private GameObject puzzle;
+        [Restrict(typeof(IInteraction))][SerializeField] private GameObject puzzle;
         public UnityEvent OnSuccess;
         public UnityEvent OnFailure;
-        private IPuzzle _puzzle;
+        private IInteraction _interaction;
 
         private void Awake()
         {
-            _puzzle = puzzle.GetComponent<IPuzzle>();
+            _interaction = puzzle.GetComponent<IInteraction>();
         }
         public override void OnPointerClick(PointerEventData eventData)
         {
             if (!isActive) return;
 
-            _puzzle.OnSuccess = OnSuccess;
-            _puzzle.OnFailure = OnFailure;
-            _puzzle.Start();
+            _interaction.OnSuccess = OnSuccess;
+            _interaction.OnFailure = OnFailure;
+            _interaction.Start();
         }
 
         public void NewIsActive(bool newIsActive)
