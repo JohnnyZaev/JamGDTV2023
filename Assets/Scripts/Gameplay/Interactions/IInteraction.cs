@@ -1,8 +1,8 @@
 using UnityEngine.Events;
 
-namespace Puzzles
+namespace Gameplay.Interactions
 {
-    public interface IPuzzle
+    public interface IInteraction
     {
         public void Start();
         public UnityEvent OnSuccess { get; set; }
