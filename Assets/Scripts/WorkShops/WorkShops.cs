@@ -31,7 +31,7 @@ namespace Workshops
 
         public void ChangeWorkShop(int index)
         {
-            if (_sparkleManager.Sparkles >= _sparkleManager.maxSparkles)
+            if (_sparkleManager.Sparkles >= _sparkleManager.maxSparkles && index != 0)
             {
                 return;
             }

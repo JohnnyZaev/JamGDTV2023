@@ -19,7 +19,7 @@ MonoBehaviour:
     hasValue: 0
     value: {fileID: 11400000, guid: f176eeacb3a6b4f43b984f76fab86c71, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
   isBubbleType: 0
   isPausingGame: 0
   text: Hard work, isn't it?

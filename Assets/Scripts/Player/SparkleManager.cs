@@ -66,6 +66,7 @@ namespace Player
 
             _sparkles = 0;
             _visualActiveSparkles = 0;
+            _workshops = FindObjectOfType<Workshops.WorkShops>();
         }
 
         private void UpdateVisualSparklesAmount()
