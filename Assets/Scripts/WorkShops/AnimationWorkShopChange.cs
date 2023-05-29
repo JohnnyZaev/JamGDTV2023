@@ -4,7 +4,7 @@ namespace Workshops
 {
     public class AnimationWorkShopChange : MonoBehaviour
     {
-        [SerializeField] private WorkShops _workShops;
+        [SerializeField] private WorkShops workShops;
         private int _index;
         public void SetIndex(int index)
         {
@@ -13,7 +13,7 @@ namespace Workshops
 
         public void ChangeWorkShop()
         {
-            _workShops.ChangeWorkShop(_index);
+            workShops.ChangeWorkShop(_index);
         }
     }
 }
