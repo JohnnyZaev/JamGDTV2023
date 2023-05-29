@@ -18,6 +18,7 @@ namespace Gameplay
         {
             _interaction = puzzle.GetComponent<IInteraction>();
         }
+
         public override void OnPointerClick(PointerEventData eventData)
         {
             if (!isActive) return;

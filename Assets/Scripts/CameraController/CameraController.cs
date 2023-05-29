@@ -47,6 +47,7 @@ namespace CameraController
 
         public void Blur(bool isActive)
         {
+            blurCamera.gameObject.SetActive(isActive);
             blur.gameObject.SetActive(isActive);
         }
     }

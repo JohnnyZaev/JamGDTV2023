@@ -9,6 +9,8 @@ namespace Dialogue
 {
     public class DialogueController : MonoBehaviour
     {
+        public static DialogueController Instance;
+
         [SerializeField] private GameObject fullScreenTextObject;
         [SerializeField] private TMP_Text fullScreenTextField;
         [SerializeField] private GameObject bubbleScreenTextObject;
@@ -24,13 +26,23 @@ namespace Dialogue
         private Image _bubbleScreenTextImage;
         private Camera _mainCamera;
 
-        private bool _isDialogueRunning;
         private Vector3 _bubblePosOffset;
         private WaitForSecondsRealtime _afterDialogueWait;
         private WaitUntil _waitUntilClick;
 
+        public bool IsDialogueRunning { get; private set; }
+
         private void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
             _player = GameObject.FindGameObjectWithTag("Player");
             _pauseController = FindObjectOfType<PauseController>();
             _fullScreenTextImage = fullScreenTextObject.GetComponent<Image>();
@@ -43,7 +55,7 @@ namespace Dialogue
 
         private void Update()
         {
-            if (!_isDialogueRunning)
+            if (!IsDialogueRunning)
                 return;
             bubbleScreenTextObject.transform.rotation = _mainCamera.transform.rotation;
             bubbleUIPosition.position = _player.transform.position + _bubblePosOffset;
@@ -68,7 +80,7 @@ namespace Dialogue
 
         private IEnumerator Talk(DialogueBase dialogue)
         {
-            if (_isDialogueRunning)
+            if (IsDialogueRunning)
                 yield break;
             Image textImage;
             TMP_Text textField;
@@ -86,7 +98,7 @@ namespace Dialogue
                 textObject = fullScreenTextObject;
             }
             _isClicked = false;
-            _isDialogueRunning = true;
+            IsDialogueRunning = true;
             textImage.color = dialogue.backgroundColor;
             textField.color = dialogue.textColor;
             textField.text = "";
@@ -117,7 +129,7 @@ namespace Dialogue
 
             _pauseController.BackToGame();
             textObject.SetActive(false);
-            _isDialogueRunning = false;
+            IsDialogueRunning = false;
             if (dialogue.hasNextDialogue.hasValue)
             {
                 StartDialogue(dialogue.hasNextDialogue);
