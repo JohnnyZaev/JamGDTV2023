@@ -2634,6 +2634,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504596956}
   m_CullTransparentMesh: 1
+--- !u!1 &523102731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2246722706731305302, guid: 51196b517bb2aae4b910c6591b69f973,
+    type: 3}
+  m_PrefabInstance: {fileID: 1435697977300962283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &523102736
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523102731}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 82e56a8a1d731da4aa3c840fde857cdd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &523847922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7231800369908406369, guid: 4227571a196634e4bbcc404295f6ebb1,
@@ -4710,7 +4758,7 @@ MonoBehaviour:
   bubbleUIPosition: {fileID: 1690138799}
   maxXPositionForBubble: 0
   waitTimeAfterDialogue: 0.5
-  bubblePosOffset: {x: 9, y: 0.2, z: 0}
+  bubblePosOffset: {x: 19, y: 3, z: 0}
   starterDialogue: {fileID: 11400000, guid: f8219a056963e664789a27d4dd6ba921, type: 2}
 --- !u!4 &1647532461
 Transform:
@@ -5286,6 +5334,14 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -0.79
       objectReference: {fileID: 0}
+    - target: {fileID: 2087544183, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087544184, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1435697978689315100, guid: 51196b517bb2aae4b910c6591b69f973,
         type: 3}
       propertyPath: m_RootOrder
@@ -5366,7 +5422,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2087544183, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}
+    - {fileID: 2087544184, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}
 --- !u!1001 &6618097803066342417
 PrefabInstance:
@@ -5494,6 +5552,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618097802778919963, guid: 476d582dd3d10d74aa61f355ab21d6e6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618097802778919963, guid: 476d582dd3d10d74aa61f355ab21d6e6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618097802778919963, guid: 476d582dd3d10d74aa61f355ab21d6e6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618097802778919963, guid: 476d582dd3d10d74aa61f355ab21d6e6,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476d582dd3d10d74aa61f355ab21d6e6, type: 3}
