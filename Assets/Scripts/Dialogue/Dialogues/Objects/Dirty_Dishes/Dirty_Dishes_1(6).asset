@@ -18,8 +18,8 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 1
     value: {fileID: 11400000, guid: bb639f1f55b53f742aa33eaa5cca12e4, type: 2}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  isBubbleType: 1
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  isBubbleType: 0
   isPausingGame: 0
   text: So much for overworking.

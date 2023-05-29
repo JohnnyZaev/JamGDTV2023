@@ -7,7 +7,7 @@ namespace Player
     public class SparkleManager : MonoBehaviour
     {
         [SerializeField] private float maxEmission = 3;
-        [SerializeField] private int maxSparkles = 3;
+        public int maxSparkles = 3;
         [SerializeField] private CollectedSparkle visualCollectedSparklePrefab;
         [SerializeField] private GameObject player;
         
@@ -18,8 +18,10 @@ namespace Player
 
         private Coroutine _waitForRightPosition;
         private int _visualActiveSparkles;
-        private int _sparkles;
+        [SerializeField] private int _sparkles;
         private static readonly int EmissiveColorName = Shader.PropertyToID("_EmissionColor");
+
+        private Workshops.WorkShops _workshops;
 
         public int Sparkles
         {
@@ -39,6 +41,10 @@ namespace Player
                 }
                 UpdateVisualSparklesAmount();
                 UpdateEmission();
+                if (_sparkles == maxSparkles)
+                {
+                    _workshops.ChangeWorkShop(0);
+                }
             }
         }
 

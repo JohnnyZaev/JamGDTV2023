@@ -18,8 +18,8 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 0
     value: {fileID: 11400000, guid: c0488f811371bc64a9e450279d4266ff, type: 2}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  isBubbleType: 1
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  isBubbleType: 0
   isPausingGame: 0
   text: ...I really had no idea how much it meant for me...

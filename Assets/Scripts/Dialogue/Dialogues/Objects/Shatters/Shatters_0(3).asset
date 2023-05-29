@@ -18,8 +18,8 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 1
     value: {fileID: 11400000, guid: c9618942f9db82649a2b71e99a524a06, type: 2}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  isBubbleType: 1
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  isBubbleType: 0
   isPausingGame: 0
   text: Losing such a playground! What a shame, am I right?

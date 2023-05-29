@@ -20,7 +20,7 @@ MonoBehaviour:
     value: {fileID: 11400000, guid: f176eeacb3a6b4f43b984f76fab86c71, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  isBubbleType: 1
+  isBubbleType: 0
   isPausingGame: 0
   text: Teaching is much harder than doing something myself, and with how little
     patience kids have it is truly quite a feat.

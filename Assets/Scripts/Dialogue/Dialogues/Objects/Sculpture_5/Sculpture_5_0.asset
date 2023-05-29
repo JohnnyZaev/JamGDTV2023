@@ -18,8 +18,8 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 0
     value: {fileID: 0}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
   isBubbleType: 1
   isPausingGame: 0
   text: Almost there! Oh, if I only I had a little more time!..

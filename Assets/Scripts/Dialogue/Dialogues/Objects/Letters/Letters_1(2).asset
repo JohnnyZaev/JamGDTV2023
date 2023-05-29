@@ -18,9 +18,9 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 1
     value: {fileID: 11400000, guid: 9489bda54d485d74a83e906c618411f5, type: 2}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  isBubbleType: 1
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  isBubbleType: 0
   isPausingGame: 0
   text: We met at one of my exhibitions. Back then I had no idea it would be the
     biggest event of my life.
