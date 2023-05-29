@@ -1669,21 +1669,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onClick:
+  isActive: 1
+  puzzle: {fileID: 0}
+  OnSuccess:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 848973658}
-        m_TargetAssemblyTypeName: Dialogue.DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &848973658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,7 +2333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onClick:
+  isActive: 1
+  puzzle: {fileID: 0}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFailure:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1500133597
@@ -2876,6 +2874,8 @@ MonoBehaviour:
   bubbleScreenTextObject: {fileID: 761989408}
   bubbleScreenTextField: {fileID: 1990855044}
   bubbleUIPosition: {fileID: 1803214977}
+  maxXPositionForBubble: 0
+  waitTimeAfterDialogue: 0.5
 --- !u!4 &1811698598
 Transform:
   m_ObjectHideFlags: 0
