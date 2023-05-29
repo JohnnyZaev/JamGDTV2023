@@ -78,10 +78,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbaa14722ad95404ab962a75b5eefe3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSparkles: 3
   maxEmission: 3
-  collectedSparklePrefab: {fileID: 2930415612063200199, guid: 9d61a5338505726499215d2ff18582c5,
+  maxSparkles: 3
+  visualCollectedSparklePrefab: {fileID: 2930415612063200199, guid: 9d61a5338505726499215d2ff18582c5,
     type: 3}
+  player: {fileID: 2246722706731305302}
 --- !u!136 &1669560791
 CapsuleCollider:
   m_ObjectHideFlags: 0

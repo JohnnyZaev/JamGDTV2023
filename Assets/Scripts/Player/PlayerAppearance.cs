@@ -8,16 +8,19 @@ namespace Player
     {
         [SerializeField] private float maxEmission = 3;
         [SerializeField] private int maxSparkles = 3;
-        [SerializeField] private float sparkleSpawnTime = 0.5f;
         [SerializeField] private CollectedSparkle visualCollectedSparklePrefab;
+        [SerializeField] private GameObject player;
         
         private CollectedSparkle[] _visualCollectedSparkles;
         
         private Material _material;
+        private Color _baseColor;
 
         private Coroutine _waitForRightPosition;
         private int _visualActiveSparkles;
         private int _sparkles;
+        private static readonly int EmissiveColorName = Shader.PropertyToID("_EmissionColor");
+
         public int Sparkles
         {
             get => _sparkles;
@@ -47,7 +50,8 @@ namespace Player
 
         private void Awake()
         {
-            _material = GetComponent<Material>();
+            _material = player.GetComponent<Renderer>().material;
+            _baseColor = _material.GetColor(EmissiveColorName);
             _visualCollectedSparkles = new CollectedSparkle[maxSparkles];
             for (int i = 0; i < _visualCollectedSparkles.Length; i++)
             {
@@ -84,7 +88,12 @@ namespace Player
 
         private void UpdateEmission()
         {
-            
+            var brightness = Mathf.Pow(2,((10 + maxEmission) / maxSparkles * _sparkles));
+            _material.SetColor(EmissiveColorName,new Color(
+                _baseColor.r * brightness,
+                _baseColor.g * brightness,
+                _baseColor.b * brightness,
+                _baseColor.a));
         }
     }
 }
