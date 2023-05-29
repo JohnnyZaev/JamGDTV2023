@@ -1,6 +1,6 @@
 using UnityEngine.Events;
 
-namespace Puzzles
+namespace Gameplay.Interactions
 {
     public interface IInteraction
     {

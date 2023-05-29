@@ -1,4 +1,4 @@
-using Puzzles;
+using Gameplay.Interactions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;

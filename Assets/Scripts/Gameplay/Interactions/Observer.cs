@@ -1,9 +1,8 @@
 using CameraController;
-using Gameplay;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Puzzles
+namespace Gameplay.Interactions
 {
     public class Observer : MonoBehaviour, IInteraction
     {
