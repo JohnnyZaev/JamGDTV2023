@@ -358,6 +358,58 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.23
   m_Center: {x: -0.5, y: -1.7, z: 0.9821937}
+--- !u!114 &153883668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153883660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  puzzle: {fileID: 153883660}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787765}
+        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
+        m_MethodName: AddSparkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &153883669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153883660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e33a9424fc66744b419e51f52f5754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 153883660}
+  cameraZoomSettings: {fileID: 11400000, guid: d6ec95de99dd1c54d8bd39f2c7005d39, type: 2}
+  cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+    type: 2}
+  uiTimeLine: {fileID: 112129408}
+  dialogue:
+  - {fileID: 11400000, guid: ad5f510756da5624b956fd9c7c776069, type: 2}
+  - {fileID: 11400000, guid: 880955203c5a53e4d8792c10503d04ee, type: 2}
 --- !u!1 &180039054
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +596,59 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.49
   m_Center: {x: -2.53, y: 1.95, z: -0.35972127}
+--- !u!114 &255504462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255504454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  puzzle: {fileID: 255504454}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787765}
+        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
+        m_MethodName: AddSparkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &255504463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255504454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e33a9424fc66744b419e51f52f5754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 255504454}
+  cameraZoomSettings: {fileID: 11400000, guid: d6ec95de99dd1c54d8bd39f2c7005d39, type: 2}
+  cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+    type: 2}
+  uiTimeLine: {fileID: 112129408}
+  dialogue:
+  - {fileID: 11400000, guid: b68bc9cc96b0ada4fbfd30f504352f2f, type: 2}
+  - {fileID: 11400000, guid: fe0ee4550c590d146a37243efdf46229, type: 2}
+  - {fileID: 11400000, guid: b95feb747f5b824489763000596e86d9, type: 2}
 --- !u!1 &276777891
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +822,58 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.6633438
   m_Center: {x: -0.49, y: -0.12206906, z: -0.013912085}
+--- !u!114 &324053865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324053857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  puzzle: {fileID: 324053857}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787765}
+        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
+        m_MethodName: AddSparkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &324053866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324053857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e33a9424fc66744b419e51f52f5754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 324053857}
+  cameraZoomSettings: {fileID: 11400000, guid: d6ec95de99dd1c54d8bd39f2c7005d39, type: 2}
+  cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+    type: 2}
+  uiTimeLine: {fileID: 112129408}
+  dialogue:
+  - {fileID: 11400000, guid: 774a54d4b819f2043a564cd84b3b3908, type: 2}
+  - {fileID: 11400000, guid: b21193ababa34e54792874f847d35955, type: 2}
 --- !u!1 &330812304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,27 +1160,27 @@ PrefabInstance:
     - target: {fileID: 1084883285582542356, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084883285801403332, guid: 4227571a196634e4bbcc404295f6ebb1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084883285801403332, guid: 4227571a196634e4bbcc404295f6ebb1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084883286774943038, guid: 4227571a196634e4bbcc404295f6ebb1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084883286774943038, guid: 4227571a196634e4bbcc404295f6ebb1,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084883285801403332, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084883285801403332, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084883286774943038, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084883286774943038, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1110505976293235891, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
@@ -1153,7 +1310,7 @@ PrefabInstance:
     - target: {fileID: 2059750277321254173, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2094427801769948004, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
@@ -1402,6 +1559,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
         type: 2}
+    - target: {fileID: 4612881589857314374, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612881589857314374, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 59ae2fa4dd403c24799ab6294962ba8e,
+        type: 2}
+    - target: {fileID: 4612881589857314374, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: adf021ea1f60f1049a6ab66974acdc43,
+        type: 2}
     - target: {fileID: 4646751598859351453, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: m_Layer
@@ -1461,6 +1635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398975247311098604, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.88
       objectReference: {fileID: 0}
     - target: {fileID: 5398975247311098604, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
@@ -1555,7 +1734,7 @@ PrefabInstance:
     - target: {fileID: 6023637143393058028, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6034519887812171331, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
@@ -1800,11 +1979,16 @@ PrefabInstance:
     - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
@@ -1819,12 +2003,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
       propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddSparkle
       objectReference: {fileID: 0}
     - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player.SparkleManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: OnSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Player.SparkleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7917532662457715921, guid: 4227571a196634e4bbcc404295f6ebb1,
@@ -1893,6 +2087,23 @@ PrefabInstance:
       propertyPath: cameraOriginPostion
       value: 
       objectReference: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+        type: 2}
+    - target: {fileID: 8230375483630878038, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230375483630878038, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 59ae2fa4dd403c24799ab6294962ba8e,
+        type: 2}
+    - target: {fileID: 8230375483630878038, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: adf021ea1f60f1049a6ab66974acdc43,
         type: 2}
     - target: {fileID: 8343248219755468846, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
@@ -2192,6 +2403,58 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.88
   m_Center: {x: -0.0101778535, y: -0.77, z: -0.099434875}
+--- !u!114 &523847930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523847922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  puzzle: {fileID: 523847922}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787765}
+        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
+        m_MethodName: AddSparkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &523847931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523847922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e33a9424fc66744b419e51f52f5754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 523847922}
+  cameraZoomSettings: {fileID: 11400000, guid: d6ec95de99dd1c54d8bd39f2c7005d39, type: 2}
+  cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+    type: 2}
+  uiTimeLine: {fileID: 112129408}
+  dialogue:
+  - {fileID: 11400000, guid: 375aa927ce5100f47864ff45f77a1ea4, type: 2}
+  - {fileID: 11400000, guid: 80ec115ba0c91c046b8394a42a09b345, type: 2}
 --- !u!114 &579783648 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6618097803627411441, guid: 476d582dd3d10d74aa61f355ab21d6e6,
@@ -2440,6 +2703,59 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.29
   m_Center: {x: 0.328864, y: -0.029887715, z: 0.4693098}
+--- !u!114 &825528968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825528960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  puzzle: {fileID: 825528960}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787765}
+        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
+        m_MethodName: AddSparkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &825528969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825528960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e33a9424fc66744b419e51f52f5754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 825528960}
+  cameraZoomSettings: {fileID: 11400000, guid: d6ec95de99dd1c54d8bd39f2c7005d39, type: 2}
+  cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+    type: 2}
+  uiTimeLine: {fileID: 112129408}
+  dialogue:
+  - {fileID: 11400000, guid: 5029739ee9aa7a24cb86c8e8005bbeab, type: 2}
+  - {fileID: 11400000, guid: 9235d45e38c3e9c42af7c374db4a7c8f, type: 2}
+  - {fileID: 11400000, guid: d2d7ec82cd47ac940824fc10a766411f, type: 2}
 --- !u!1 &863961626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,30 +2889,6 @@ MonoBehaviour:
   OnSuccess:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2050310515}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 782787765}
-        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
-        m_MethodName: AddSparkle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 958788810}
         m_TargetAssemblyTypeName: Gameplay.SparkleObject, Assembly-CSharp
         m_MethodName: IsActive
@@ -2608,6 +2900,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1488366239}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2050310515}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   OnFailure:
     m_PersistentCalls:
@@ -2996,25 +3312,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148543488}
   m_CullTransparentMesh: 1
---- !u!1 &1190856084 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4730701338129369174, guid: 4227571a196634e4bbcc404295f6ebb1,
-    type: 3}
-  m_PrefabInstance: {fileID: 334675583}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1190856088
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190856084}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 14.33
-  m_Center: {x: 1.9100837, y: -33.66192, z: -0.5199089}
 --- !u!1 &1328121569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,8 +3509,60 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 12.357556
-  m_Center: {x: 0.0000000152096, y: -0.44002464, z: -0.3405906}
+  m_Radius: 29.85
+  m_Center: {x: 20.19, y: 20.67, z: 11.1}
+--- !u!114 &1397636599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397636591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c0f343b2dc6446ada3d231a2caeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  puzzle: {fileID: 1397636591}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787765}
+        m_TargetAssemblyTypeName: Player.SparkleManager, Assembly-CSharp
+        m_MethodName: AddSparkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1397636600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397636591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e33a9424fc66744b419e51f52f5754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 1397636591}
+  cameraZoomSettings: {fileID: 11400000, guid: d6ec95de99dd1c54d8bd39f2c7005d39, type: 2}
+  cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
+    type: 2}
+  uiTimeLine: {fileID: 112129408}
+  dialogue:
+  - {fileID: 11400000, guid: 656947b5e7d1c094b97418a1d22b203e, type: 2}
+  - {fileID: 11400000, guid: bda240447ed26da44b88a497e7ab286e, type: 2}
 --- !u!1001 &1409343333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4229,6 +4578,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1550570855}
     m_Modifications:
+    - target: {fileID: 3274899411028638924, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.19999695
+      objectReference: {fileID: 0}
     - target: {fileID: 4171845858207337929, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
       propertyPath: m_Pivot.x

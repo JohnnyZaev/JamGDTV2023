@@ -18,8 +18,8 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 1
     value: {fileID: 11400000, guid: 8f362ecc40666b143807e01b133a1e75, type: 2}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  isBubbleType: 1
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  isBubbleType: 0
   isPausingGame: 0
   text: Wait, is that drawing under them?
