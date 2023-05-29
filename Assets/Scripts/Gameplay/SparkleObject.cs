@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using Attributes;
+using Unity.VisualScripting;
 
 namespace Gameplay
 {
@@ -21,7 +22,6 @@ namespace Gameplay
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log("Click");
             if (!isActive) return;
         
             _interaction.OnSuccess = OnSuccess;
