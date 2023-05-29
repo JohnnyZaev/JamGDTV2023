@@ -1,3 +1,5 @@
+using System;
+using Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +11,13 @@ namespace Workshops
         private WorkShop[] _workshops;
         private WorkShop _activeWorkshop;
         private int index = 0;
+        private SparkleManager _sparkleManager;
+
+        private void Awake()
+        {
+            _sparkleManager = FindObjectOfType<SparkleManager>();
+        }
+
         void Start()
         {
             _workshops = new WorkShop[gameObject.transform.childCount];
@@ -22,6 +31,10 @@ namespace Workshops
 
         public void ChangeWorkShop(int index)
         {
+            if (_sparkleManager.Sparkles >= _sparkleManager.maxSparkles)
+            {
+                return;
+            }
             onWorkshopChanged.Invoke();
             _activeWorkshop?.gameObject.SetActive(false);
             _activeWorkshop = _workshops[index];
