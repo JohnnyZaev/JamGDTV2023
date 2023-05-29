@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8a0dcebc57264f82612660ab1bf33, type: 3}
+  m_Name: Newspaper_1(2)
+  m_EditorClassIdentifier: 
+  hasTypewriterEffect:
+    hasValue: 1
+    value: 0.08
+  hasNextDialogue:
+    hasValue: 1
+    value: {fileID: 11400000, guid: 1d4fa50b15ad7584a9cca673567d8b3f, type: 2}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  isBubbleType: 1
+  isPausingGame: 0
+  text: I'd work, and she'd read the newspaper aloud.
