@@ -18,6 +18,7 @@ namespace Dialogue
         [SerializeField] private RectTransform bubbleUIPosition;
         [SerializeField] private float maxXPositionForBubble;
         [SerializeField] private float waitTimeAfterDialogue = 0.5f;
+        [SerializeField] private Vector3 bubblePosOffset;
 
         [SerializeField] private DialogueBase starterDialogue;
 
@@ -28,7 +29,6 @@ namespace Dialogue
         private Image _bubbleScreenTextImage;
         private Camera _mainCamera;
 
-        private Vector3 _bubblePosOffset;
         private WaitForSecondsRealtime _afterDialogueWait;
         private WaitUntil _waitUntilClick;
 
@@ -50,7 +50,6 @@ namespace Dialogue
             _fullScreenTextImage = fullScreenTextObject.GetComponent<Image>();
             _bubbleScreenTextImage = bubbleScreenTextObject.GetComponent<Image>();
             _mainCamera = Camera.main;
-            _bubblePosOffset = Vector3.right * 6;
             _afterDialogueWait = new WaitForSecondsRealtime(waitTimeAfterDialogue);
             _waitUntilClick = new WaitUntil(() => InputManager.Instance.LeftMouseButtonInput);
             StartDialogue(starterDialogue);
@@ -61,15 +60,7 @@ namespace Dialogue
             if (!IsDialogueRunning)
                 return;
             bubbleScreenTextObject.transform.rotation = _mainCamera.transform.rotation;
-            bubbleUIPosition.position = _player.transform.position + _bubblePosOffset;
-            if (_player.transform.position.x > maxXPositionForBubble)
-            {
-                _bubblePosOffset.x = -Mathf.Abs(_bubblePosOffset.x);
-            }
-            else
-            {
-                _bubblePosOffset.x = Mathf.Abs(_bubblePosOffset.x);
-            }
+            bubbleUIPosition.position = _player.transform.position + bubblePosOffset;
             if (InputManager.Instance.LeftMouseButtonInput)
             {
                 _isClicked = true;

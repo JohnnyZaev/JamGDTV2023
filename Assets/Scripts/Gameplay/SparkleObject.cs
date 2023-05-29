@@ -21,8 +21,9 @@ namespace Gameplay
 
         public override void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("Click");
             if (!isActive) return;
-
+        
             _interaction.OnSuccess = OnSuccess;
             _interaction.OnFailure = OnFailure;
             _interaction.Start();
