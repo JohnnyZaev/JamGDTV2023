@@ -28,7 +28,7 @@ namespace Player
             get => _sparkles;
             set
             {
-                if (value < 0 || value < _sparkles)
+                if (value < 0)
                 {
                     _sparkles = 0;
                 } else if (value > maxSparkles)
@@ -73,23 +73,28 @@ namespace Player
         {
             if (_sparkles == 0)
             {
-                for (int i = 0; i < _visualActiveSparkles; --_visualActiveSparkles)
+                foreach (var collectedSparkle in _visualCollectedSparkles)
                 {
-                    _visualCollectedSparkles[_visualActiveSparkles - 1].gameObject.SetActive(false);
+                    collectedSparkle.gameObject.SetActive(false);
                 }
-
-                _visualActiveSparkles = _sparkles;
             }
             else
             {
                 var targetAngleDifference = 360.0f / _sparkles;
                 for (int i = 0; i < _sparkles; i++)
                 {
-                    _visualCollectedSparkles[i].transform.localRotation = _visualCollectedSparkles[0].transform.localRotation * Quaternion.Euler(0f, targetAngleDifference * i, 0f);
+                    _visualCollectedSparkles[i].transform.localRotation =
+                        _visualCollectedSparkles[0].transform.localRotation *
+                        Quaternion.Euler(0f, targetAngleDifference * i, 0f);
                     _visualCollectedSparkles[i].gameObject.SetActive(true);
                 }
-                _visualActiveSparkles = _sparkles;
+
+                for (int i = _sparkles; i < _visualActiveSparkles; i++)
+                {
+                    _visualCollectedSparkles[i].gameObject.SetActive(false);
+                }
             }
+            _visualActiveSparkles = _sparkles;
         }
 
         private void UpdateEmission()
