@@ -20,8 +20,6 @@ namespace Dialogue
         [SerializeField] private float waitTimeAfterDialogue = 0.5f;
         [SerializeField] private Vector3 bubblePosOffset;
 
-        [SerializeField] private DialogueBase starterDialogue;
-
         private GameObject _player;
         private PauseController _pauseController;
         private bool _isClicked;
@@ -52,7 +50,6 @@ namespace Dialogue
             _mainCamera = Camera.main;
             _afterDialogueWait = new WaitForSecondsRealtime(waitTimeAfterDialogue);
             _waitUntilClick = new WaitUntil(() => InputManager.Instance.LeftMouseButtonInput);
-            StartDialogue(starterDialogue);
         }
 
         private void Update()
