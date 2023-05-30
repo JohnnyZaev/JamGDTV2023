@@ -1218,6 +1218,59 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 34.60578, y: 25.800982, z: 1}
   m_Center: {x: -4.2502975, y: 12.13, z: -36.6}
+--- !u!1 &652703021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652703023}
+  - component: {fileID: 652703022}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &652703022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652703021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6ee08f31cdfb34782cccefa80ce510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialText:
+  - {fileID: 9150082203001922424, guid: b2eefe7680da4bf45af75883926928e2, type: 3}
+  - {fileID: 9150082203001922424, guid: cb67e243d3f6a83468042e22a5530461, type: 3}
+  - {fileID: 9150082203001922424, guid: 4b593c496ff74e149be62f46dca2afe5, type: 3}
+  - {fileID: 9150082203001922424, guid: e6d4f1643895c824c9512845484e0948, type: 3}
+  - {fileID: 9150082203001922424, guid: f2ca547b6d8d436449e5f783571b1318, type: 3}
+  - {fileID: 9150082203001922424, guid: 121569be3781d4b4a89cd48e4feaa2e1, type: 3}
+  - {fileID: 9150082203001922424, guid: df3e3531443d37d4e80e86df7a4d9be7, type: 3}
+  tutorialArea: {fileID: 1284659501}
+--- !u!4 &652703023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652703021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1086153463}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725724081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435697978689315102, guid: 51196b517bb2aae4b910c6591b69f973,
@@ -1252,10 +1305,37 @@ MonoBehaviour:
   timerTextField: {fileID: 342494950}
   timerStart: 780
   goodEndingSparkles: 0
+  maxLevels: 0
   onEndGame:
     m_PersistentCalls:
       m_Calls: []
-  maxLevels: 0
+  startGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 782787770}
+        m_TargetAssemblyTypeName: GameInfo.GameInfo, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1284659500}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &790100574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,6 +1710,7 @@ Transform:
   m_Children:
   - {fileID: 1635571295}
   - {fileID: 330812305}
+  - {fileID: 652703023}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1831,6 +1912,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148543488}
   m_CullTransparentMesh: 1
+--- !u!1 &1284659500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4919600332515407565, guid: cc12a27af07f81e4baec7957ede35cba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1937390356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1284659501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6908899066861174836, guid: cc12a27af07f81e4baec7957ede35cba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1937390356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284659500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1328121569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,6 +2959,7 @@ MonoBehaviour:
   maxXPositionForBubble: 0
   waitTimeAfterDialogue: 0.5
   bubblePosOffset: {x: 19, y: 3, z: 0}
+  starterDialogue: {fileID: 11400000, guid: f8219a056963e664789a27d4dd6ba921, type: 2}
 --- !u!4 &1647532461
 Transform:
   m_ObjectHideFlags: 0
@@ -2887,6 +2987,35 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6618097803066342417}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877063691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877063689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 652703022}
+          m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+          m_MethodName: ClickBuble
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1891358321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,10 +3180,90 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 652703022}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ClickTimeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TutorialManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145495999465192784, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3274899411028638924, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.19999695
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 652703022}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ClickTimeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TutorialManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171845857506443302, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4171845858207337929, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
@@ -3205,6 +3414,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 652703022}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ClickTimeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: TutorialManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880811493509398938, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc12a27af07f81e4baec7957ede35cba, type: 3}
