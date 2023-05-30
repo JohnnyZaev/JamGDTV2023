@@ -84,6 +84,7 @@ namespace Dialogue
                 textImage = _bubbleScreenTextImage;
                 textField = bubbleScreenTextField;
                 textObject = bubbleScreenTextObject;
+                textObject.SetActive(true);
             }
             else
             {
