@@ -1,3 +1,4 @@
+using Dialogue;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,8 +12,9 @@ namespace GameInfo
         [SerializeField] private TextMeshProUGUI timerTextField;
         [SerializeField] private float timerStart;
         [SerializeField] private float goodEndingSparkles;
-        [SerializeField] private UnityEvent onEndGame;
         [SerializeField] private int maxLevels;
+        [SerializeField] private UnityEvent onEndGame;
+        [SerializeField] private UnityEvent startGame;
         private bool _isTimerStarted = false;
         private int _sparklesCounter;
         public float TimerStart { get => timerStart;
@@ -24,9 +26,10 @@ namespace GameInfo
             set => _sparklesCounter += 1;
         }
 
-        private void Awake()
+        private void Start()
         {
-            StartTimer(); // For debug
+            //StartTimer(); // For debug
+            DialogueController.Instance.StartFirstDialogue(DialogueController.Instance.starterDialogue, startGame);
         }
 
         private void Update()
