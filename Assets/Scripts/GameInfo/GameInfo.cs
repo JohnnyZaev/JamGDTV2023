@@ -15,26 +15,25 @@ namespace GameInfo
         [SerializeField] private int maxLevels;
         private bool _isTimerStarted = false;
         private int _sparklesCounter;
-        public float TimerStart { get { return timerStart; } private set { timerStart = value; } }
+        public float TimerStart { get => timerStart;
+            private set => timerStart = value;
+        }
         public int SparklesCounter
         {
-            get
-            {
-                return _sparklesCounter;
-            }
-            set
-            {
-                _sparklesCounter += 1;
-            }
+            get => _sparklesCounter;
+            set => _sparklesCounter += 1;
         }
 
-        void Update()
+        private void Awake()
         {
-            if (_isTimerStarted)
-            {
-                TimerStart -= Time.deltaTime;
-                timerTextField.text = Mathf.Round(TimerStart).ToString();
-            }
+            StartTimer(); // For debug
+        }
+
+        private void Update()
+        {
+            if (!_isTimerStarted) return;
+            TimerStart -= Time.deltaTime;
+            timerTextField.text = $"{Mathf.FloorToInt(TimerStart) / 60} : {Mathf.FloorToInt(TimerStart) % 60}";
         }
 
         public void StartTimer()
