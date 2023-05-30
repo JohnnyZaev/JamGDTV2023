@@ -42,7 +42,6 @@ namespace Gameplay
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            _tutorialManager.ClickSculpture();
             if (currentStage >= sculptureStages.Length - 1) return;
 
             if (_sparkleManager.Sparkles < 1)
@@ -50,6 +49,7 @@ namespace Gameplay
                 return;
             }
 
+            _tutorialManager.ClickSculpture();
             --_sparkleManager.Sparkles;
             sculptureStages[currentStage].sculptureView.SetActive(false);
             ++currentStage;

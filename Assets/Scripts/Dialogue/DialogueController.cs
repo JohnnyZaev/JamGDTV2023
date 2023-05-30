@@ -190,7 +190,7 @@ namespace Dialogue
             IsDialogueRunning = false;
             if (dialogue.hasNextDialogue.hasValue)
             {
-                TalkFirstDialogue(dialogue.hasNextDialogue, startGame);
+                StartFirstDialogue(dialogue.hasNextDialogue, startGame);
             }
             startGame.Invoke();
         }
