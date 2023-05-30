@@ -859,6 +859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorkShops
       objectReference: {fileID: 0}
+    - target: {fileID: 1084883285801403332, guid: 4227571a196634e4bbcc404295f6ebb1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4612881589857314374, guid: 4227571a196634e4bbcc404295f6ebb1,
         type: 3}
       propertyPath: uiTimeLine
@@ -874,7 +879,10 @@ PrefabInstance:
       propertyPath: uiTimeLine
       value: 
       objectReference: {fileID: 112129408}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1084883286774943036, guid: 4227571a196634e4bbcc404295f6ebb1, type: 3}
+    - {fileID: 1084883285801403354, guid: 4227571a196634e4bbcc404295f6ebb1, type: 3}
+    - {fileID: 1084883285582542314, guid: 4227571a196634e4bbcc404295f6ebb1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4227571a196634e4bbcc404295f6ebb1, type: 3}
 --- !u!114 &342494950 stripped
 MonoBehaviour:
@@ -2852,7 +2860,6 @@ MonoBehaviour:
   maxXPositionForBubble: 0
   waitTimeAfterDialogue: 0.5
   bubblePosOffset: {x: 19, y: 3, z: 0}
-  starterDialogue: {fileID: 11400000, guid: f8219a056963e664789a27d4dd6ba921, type: 2}
 --- !u!4 &1647532461
 Transform:
   m_ObjectHideFlags: 0

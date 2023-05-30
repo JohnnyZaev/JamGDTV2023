@@ -20,7 +20,9 @@ namespace Dialogue
         [SerializeField] private float maxXPositionForBubble;
         [SerializeField] private float waitTimeAfterDialogue = 0.5f;
         [SerializeField] private Vector3 bubblePosOffset;
+
         public DialogueBase starterDialogue;
+
         private GameObject _player;
         private PauseController _pauseController;
         private bool _isClicked;
@@ -87,6 +89,7 @@ namespace Dialogue
                 textImage = _bubbleScreenTextImage;
                 textField = bubbleScreenTextField;
                 textObject = bubbleScreenTextObject;
+                textObject.SetActive(true);
             }
             else
             {

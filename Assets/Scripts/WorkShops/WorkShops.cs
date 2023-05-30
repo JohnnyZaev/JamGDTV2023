@@ -8,8 +8,8 @@ namespace Workshops
     public class WorkShops : MonoBehaviour
     {
         [SerializeField] private UnityEvent onWorkshopChanged;
-        private WorkShop[] _workshops;
-        private WorkShop _activeWorkshop;
+        private GameObject[] _workshops;
+        private GameObject _activeWorkshop;
         private int index = 0;
         private SparkleManager _sparkleManager;
 
@@ -20,30 +20,24 @@ namespace Workshops
 
         void Start()
         {
-            _workshops = new WorkShop[gameObject.transform.childCount];
+            _workshops = new GameObject[gameObject.transform.childCount];
             foreach (Transform child in transform)
             {
-                _workshops[index++] = child.GetComponent<WorkShop>();
+                _workshops[index++] = child.gameObject;
             }
             _activeWorkshop = _workshops[0];
-            _activeWorkshop.gameObject.SetActive(true);
+            _activeWorkshop.SetActive(true);
         }
 
         public void ChangeWorkShop(int index)
         {
-            if (_sparkleManager.Sparkles >= _sparkleManager.maxSparkles && index != 0)
-            {
-                return;
-            }
+            Debug.Log(index);
+            if (_activeWorkshop == _workshops[index]) return;
+            if (_activeWorkshop == _workshops[0] && _sparkleManager.Sparkles > 0) return;
             onWorkshopChanged.Invoke();
-            _activeWorkshop?.gameObject.SetActive(false);
+            _activeWorkshop.SetActive(false);
             _activeWorkshop = _workshops[index];
-            _activeWorkshop.gameObject.SetActive(true);
-        }
-
-        // TODO: Delete when OnWorkShopChanged Event is Assigned
-        public void Test()
-        {
+            _activeWorkshop.SetActive(true);
         }
     }
 }

@@ -18,8 +18,6 @@ namespace Gameplay
         private struct SculptureStage
         {
             public GameObject sculptureView;
-            [Min(0)]
-            public int sparklesToChange;
             public DialogueBase[] dialogues;
         }
         [SerializeField]
@@ -46,33 +44,17 @@ namespace Gameplay
         {
             _tutorialManager.ClickSculpture();
             if (currentStage >= sculptureStages.Length - 1) return;
-            _collectedSparkles = _sparkleManager.Sparkles;
-            _sparkleManager.Sparkles = 0;
-            
-            int newStage = currentStage;
-            while (_collectedSparkles >= sculptureStages[newStage].sparklesToChange)
-            {
-                _collectedSparkles -= sculptureStages[newStage].sparklesToChange;
-                ++newStage;
-            }
 
-            if (newStage != currentStage)
-            {
-                sculptureStages[currentStage].sculptureView.SetActive(false);
-                sculptureStages[newStage].sculptureView.SetActive(true);
-                _dialogueStage = 0;
-                currentStage = newStage;
-            }
-
-            if (_dialogueStage > sculptureStages[currentStage].dialogues.Length - 1)
+            if (_sparkleManager.Sparkles < 1)
             {
                 return;
             }
+
+            --_sparkleManager.Sparkles;
+            sculptureStages[currentStage].sculptureView.SetActive(false);
+            ++currentStage;
+            sculptureStages[currentStage].sculptureView.SetActive(true);
             DialogueController.Instance.StartDialogue(sculptureStages[currentStage].dialogues[_dialogueStage]);
-            if (_dialogueStage < sculptureStages[currentStage].dialogues.Length - 1)
-            {
-                ++_dialogueStage;
-            }
         }
     }
 }
