@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using Dialogue;
 using TMPro;
 using UnityEngine;
@@ -26,10 +28,11 @@ namespace GameInfo
             set => _sparklesCounter += 1;
         }
 
-        private void Start()
+        private IEnumerator Start()
         {
-            //StartTimer(); // For debug
-            DialogueController.Instance.StartFirstDialogue(DialogueController.Instance.starterDialogue, startGame);
+            DialogueController.Instance.StartDialogue(DialogueController.Instance.starterDialogue);
+            yield return new WaitUntil(() => DialogueController.Instance.bubbleScreenTextImage.gameObject.activeInHierarchy);
+            startGame.Invoke();
         }
 
         private void Update()

@@ -2959,6 +2959,7 @@ MonoBehaviour:
   maxXPositionForBubble: 0
   waitTimeAfterDialogue: 0.5
   bubblePosOffset: {x: 19, y: 3, z: 0}
+  bubbleScreenTextImage: {fileID: 0}
   starterDialogue: {fileID: 11400000, guid: f8219a056963e664789a27d4dd6ba921, type: 2}
 --- !u!4 &1647532461
 Transform:
