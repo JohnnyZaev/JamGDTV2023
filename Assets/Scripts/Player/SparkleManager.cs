@@ -46,7 +46,6 @@ namespace Player
                     _sparkles = value;
                 }
                 UpdateVisualSparklesAmount();
-                UpdateEmission();
                 UpdateLighting();
                 if (_sparkles == maxSparkles)
                 {

@@ -7,7 +7,8 @@ namespace Workshops
 {
     public class WorkShops : MonoBehaviour
     {
-        [SerializeField] private Light light;
+        [SerializeField] private Light currentTimeLight;
+        [SerializeField] private Light pastLight;
         [SerializeField] private WorkshopInfo[] _workshops;
         [SerializeField] private UnityEvent onWorkshopChanged;
         private WorkshopInfo _activeWorkshop;
@@ -43,12 +44,14 @@ namespace Workshops
             _activeWorkshop.WorkShop.SetActive(true);
             if (_activeWorkshop.sparklesLeft > 0)
             {
-                light.gameObject.SetActive(false);
+                currentTimeLight.gameObject.SetActive(false);
+                pastLight.gameObject.SetActive(true);
                 _sparkleManager.HasEmission = true;
             }
             else
             {
-                light.gameObject.SetActive(true);
+                currentTimeLight.gameObject.SetActive(true);
+                currentTimeLight.gameObject.SetActive(false);
                 _sparkleManager.HasEmission = false;
             }
         }

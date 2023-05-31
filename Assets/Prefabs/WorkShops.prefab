@@ -101,7 +101,6 @@ Transform:
   - {fileID: 5398975247311098604}
   - {fileID: 4230600663982865030}
   - {fileID: 3191231138069183927}
-  - {fileID: 4134978812191118965}
   m_Father: {fileID: 1084883285801403355}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,14 +151,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a59a455741a52a4daf24f9e893c9a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 0}
+  currentTimeLight: {fileID: 0}
+  pastLight: {fileID: 0}
   _workshops:
   - WorkShop: {fileID: 1084883286774943038}
     sparklesLeft: 0
   - WorkShop: {fileID: 1084883285801403332}
-    sparklesLeft: 2
+    sparklesLeft: 4
   - WorkShop: {fileID: 1084883285582542356}
-    sparklesLeft: 3
+    sparklesLeft: 4
   onWorkshopChanged:
     m_PersistentCalls:
       m_Calls:
@@ -289,37 +289,6 @@ CapsuleCollider:
   m_Height: 8.05
   m_Direction: 1
   m_Center: {x: -1.1, y: 14.5, z: 14.3}
---- !u!1 &2441741472480686160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4134978812191118965}
-  m_Layer: 6
-  m_Name: ClockAndNotes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4134978812191118965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2441741472480686160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2036291985}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &28658396
 PrefabInstance:
   m_ObjectHideFlags: 0
