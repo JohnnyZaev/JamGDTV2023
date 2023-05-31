@@ -12,7 +12,8 @@ namespace Gameplay
         [ShowOnly]
         [SerializeField]
         private int currentStage;
-    
+        private TutorialManager _tutorialManager;
+
         [Serializable]
         private struct SculptureStage
         {
@@ -36,6 +37,7 @@ namespace Gameplay
             currentStage = 0;
             sculptureStages[currentStage].sculptureView.SetActive(true);
             _sparkleManager = FindObjectOfType<SparkleManager>();
+            _tutorialManager = FindObjectOfType<TutorialManager>();
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -47,6 +49,7 @@ namespace Gameplay
                 return;
             }
 
+            _tutorialManager.ClickSculpture();
             --_sparkleManager.Sparkles;
             sculptureStages[currentStage].sculptureView.SetActive(false);
             ++currentStage;

@@ -20,11 +20,13 @@ namespace Dialogue
         [SerializeField] private float waitTimeAfterDialogue = 0.5f;
         [SerializeField] private Vector3 bubblePosOffset;
 
+        [HideInInspector] public Image bubbleScreenTextImage;
+        public DialogueBase starterDialogue;
+
         private GameObject _player;
         private PauseController _pauseController;
         private bool _isClicked;
         private Image _fullScreenTextImage;
-        private Image _bubbleScreenTextImage;
         private Camera _mainCamera;
 
         private WaitForSecondsRealtime _afterDialogueWait;
@@ -46,7 +48,7 @@ namespace Dialogue
             _player = GameObject.FindGameObjectWithTag("Player");
             _pauseController = FindObjectOfType<PauseController>();
             _fullScreenTextImage = fullScreenTextObject.GetComponent<Image>();
-            _bubbleScreenTextImage = bubbleScreenTextObject.GetComponent<Image>();
+            bubbleScreenTextImage = bubbleScreenTextObject.GetComponent<Image>();
             _mainCamera = Camera.main;
             _afterDialogueWait = new WaitForSecondsRealtime(waitTimeAfterDialogue);
             _waitUntilClick = new WaitUntil(() => InputManager.Instance.LeftMouseButtonInput);
@@ -78,7 +80,7 @@ namespace Dialogue
             GameObject textObject;
             if (dialogue.isBubbleType)
             {
-                textImage = _bubbleScreenTextImage;
+                textImage = bubbleScreenTextImage;
                 textField = bubbleScreenTextField;
                 textObject = bubbleScreenTextObject;
                 textObject.SetActive(true);

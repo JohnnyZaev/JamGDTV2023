@@ -13,17 +13,20 @@ namespace Gameplay
         [Restrict(typeof(IInteraction))][SerializeField] private GameObject puzzle;
         public UnityEvent OnSuccess;
         public UnityEvent OnFailure;
+        private TutorialManager _tutorialManager;
         private IInteraction _interaction;
 
         private void Awake()
         {
             _interaction = puzzle.GetComponent<IInteraction>();
+            _tutorialManager = FindObjectOfType<TutorialManager>();
         }
 
         public override void OnPointerClick(PointerEventData eventData)
         {
             if (!isActive) return;
-        
+
+            _tutorialManager.ClickItem();
             _interaction.OnSuccess = OnSuccess;
             _interaction.OnFailure = OnFailure;
             _interaction.Start();
