@@ -152,6 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a59a455741a52a4daf24f9e893c9a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  light: {fileID: 0}
+  _workshops:
+  - WorkShop: {fileID: 1084883286774943038}
+    sparklesLeft: 0
+  - WorkShop: {fileID: 1084883285801403332}
+    sparklesLeft: 2
+  - WorkShop: {fileID: 1084883285582542356}
+    sparklesLeft: 3
   onWorkshopChanged:
     m_PersistentCalls:
       m_Calls:
@@ -176,7 +184,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084883285582542315}
-  - component: {fileID: 1084883285582542314}
   m_Layer: 0
   m_Name: WorkShop3
   m_TagString: WorkShop
@@ -201,34 +208,6 @@ Transform:
   m_Father: {fileID: 1084883284883335363}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1084883285582542314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084883285582542356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSparkles: 1
-  onSparklesCollected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
-        m_MethodName: LevelCompleted
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1084883285801403332
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,14 +217,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084883285801403355}
-  - component: {fileID: 1084883285801403354}
   m_Layer: 0
   m_Name: WorkShop2
   m_TagString: WorkShop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1084883285801403355
 Transform:
   m_ObjectHideFlags: 0
@@ -263,34 +241,6 @@ Transform:
   m_Father: {fileID: 1084883284883335363}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1084883285801403354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084883285801403332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSparkles: 2
-  onSparklesCollected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
-        m_MethodName: LevelCompleted
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1084883286774943038
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +250,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084883286774943037}
-  - component: {fileID: 1084883286774943036}
   - component: {fileID: 1894125075}
   m_Layer: 0
   m_Name: WorkShop1
@@ -326,34 +275,6 @@ Transform:
   m_Father: {fileID: 1084883284883335363}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1084883286774943036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084883286774943038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f3b96241003f9468c2218d85be8869, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSparkles: 3
-  onSparklesCollected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameInfo, Assembly-CSharp
-        m_MethodName: LevelCompleted
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!136 &1894125075
 CapsuleCollider:
   m_ObjectHideFlags: 0

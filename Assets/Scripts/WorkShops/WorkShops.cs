@@ -7,11 +7,19 @@ namespace Workshops
 {
     public class WorkShops : MonoBehaviour
     {
+        [SerializeField] private Light light;
+        [SerializeField] private WorkshopInfo[] _workshops;
         [SerializeField] private UnityEvent onWorkshopChanged;
-        private GameObject[] _workshops;
-        private GameObject _activeWorkshop;
+        private WorkshopInfo _activeWorkshop;
         private int index = 0;
         private SparkleManager _sparkleManager;
+        
+        [Serializable]
+        private struct WorkshopInfo
+        {
+            public GameObject WorkShop;
+            public int sparklesLeft;
+        }
 
         private void Awake()
         {
@@ -20,24 +28,29 @@ namespace Workshops
 
         void Start()
         {
-            _workshops = new GameObject[gameObject.transform.childCount];
-            foreach (Transform child in transform)
-            {
-                _workshops[index++] = child.gameObject;
-            }
             _activeWorkshop = _workshops[0];
-            _activeWorkshop.SetActive(true);
+            _activeWorkshop.WorkShop.SetActive(true);
         }
 
         public void ChangeWorkShop(int index)
         {
             Debug.Log(index);
-            if (_activeWorkshop == _workshops[index]) return;
-            if (_activeWorkshop == _workshops[0] && _sparkleManager.Sparkles > 0) return;
+            if (_activeWorkshop.WorkShop == _workshops[index].WorkShop) return;
+            if (_activeWorkshop.WorkShop == _workshops[0].WorkShop && _sparkleManager.Sparkles == _sparkleManager.maxSparkles) return;
             onWorkshopChanged.Invoke();
-            _activeWorkshop.SetActive(false);
+            _activeWorkshop.WorkShop.SetActive(false);
             _activeWorkshop = _workshops[index];
-            _activeWorkshop.SetActive(true);
+            _activeWorkshop.WorkShop.SetActive(true);
+            if (_activeWorkshop.sparklesLeft > 0)
+            {
+                light.gameObject.SetActive(false);
+                _sparkleManager.HasEmission = true;
+            }
+            else
+            {
+                light.gameObject.SetActive(true);
+                _sparkleManager.HasEmission = false;
+            }
         }
     }
 }
