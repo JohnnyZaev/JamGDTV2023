@@ -15,9 +15,11 @@ namespace GameInfo
         [SerializeField] private float timerStart;
         [SerializeField] private float goodEndingSparkles;
         [SerializeField] private int maxLevels;
+        [SerializeField] private DialogueBase timerEndDialogue;
         [SerializeField] private UnityEvent onEndGame;
         [SerializeField] private UnityEvent startGame;
         private bool _isTimerStarted = false;
+        private bool _gameEnded = false;
         private int _sparklesCounter;
         public float TimerStart { get => timerStart;
             private set => timerStart = value;
@@ -37,11 +39,31 @@ namespace GameInfo
 
         private void Update()
         {
+            if (DialogueController.Instance.starterDialogue.isEndGameDialogue)
+            {
+                StartCoroutine(EndGame());
+                StopTimer();
+            }
+
+            if (TimerStart <= 0 && !_gameEnded)
+            {
+                timerTextField.text = $"0 : 0";
+                _gameEnded = true;
+                StopTimer();
+                StartCoroutine(TimerEnded());
+            }
+
             if (!_isTimerStarted) return;
+
             TimerStart -= Time.deltaTime;
             timerTextField.text = $"{Mathf.FloorToInt(TimerStart) / 60} : {Mathf.FloorToInt(TimerStart) % 60}";
         }
 
+        public IEnumerator EndGame()
+        {
+           yield return new WaitUntil(() => !DialogueController.Instance.IsDialogueRunning);
+            onEndGame.Invoke();
+        }
         public void StartTimer()
         {
             _isTimerStarted = true;
@@ -57,14 +79,12 @@ namespace GameInfo
             SparklesCounter++;
         }
 
-        public void LevelCompleted()
+        public IEnumerator TimerEnded()
         {
-            levelsCompleted++;
-
-            if (levelsCompleted == maxLevels)
-            {
-                onEndGame.Invoke();
-            }
+            yield return new WaitUntil(() => DialogueController.Instance.IsDialogueRunning == false);
+            DialogueController.Instance.StartDialogue(timerEndDialogue);
+            yield return new WaitUntil(() => DialogueController.Instance.IsDialogueRunning == false);
+            Application.Quit();
         }
     }
 }

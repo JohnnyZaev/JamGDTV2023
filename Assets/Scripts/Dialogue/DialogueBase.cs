@@ -12,6 +12,7 @@ namespace Dialogue
         public Color backgroundColor;
         public bool isBubbleType;
         public bool isPausingGame;
+        public bool isEndGameDialogue;
         [TextArea(10, 40)]public string text;
     }
 }

@@ -1,6 +1,7 @@
 using Dialogue;
 using Input;
 using Player;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private List<TextMeshProUGUI> tutorialText;
     [SerializeField] private TextMeshProUGUI tutorialArea;
+    [SerializeField] private float changeTutorialPositionAmount;
     private SparkleManager _sparkleManager;
     private int  _tutorialIndex = 0;
     private bool _isBubleClicked = false;
@@ -31,7 +33,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (_tutorialIndex == 0)
         {
-            if (_isBubleClicked)
+            if (InputManager.Instance.LeftMouseButtonInput && !DialogueController.Instance.starterDialogue.hasNextDialogue.hasValue)
             {
                 _tutorialIndex++;
                 tutorialArea.text = tutorialText[_tutorialIndex].text;
@@ -50,6 +52,7 @@ public class TutorialManager : MonoBehaviour
             if (_isItemClicked)
             {
                 _tutorialIndex++;
+                tutorialArea.gameObject.transform.parent.GetComponent<RectTransform>().anchoredPosition -= new Vector2(0, changeTutorialPositionAmount);
                 tutorialArea.text = tutorialText[_tutorialIndex].text;
             }
         }
@@ -59,12 +62,19 @@ public class TutorialManager : MonoBehaviour
             {
                 _tutorialIndex++;
                 tutorialArea.text = tutorialText[_tutorialIndex].text;
+                _isItemClicked = false;
             }
         }
         else if (_tutorialIndex == 4)
         {
+            if (_isItemClicked)
+            {
+                tutorialArea.gameObject.SetActive(false);
+            }
             if (_sparkleManager.Sparkles == 3)
             {
+                tutorialArea.gameObject.SetActive(true);
+                tutorialArea.gameObject.transform.parent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, changeTutorialPositionAmount);
                 _tutorialIndex++;
                 tutorialArea.text = tutorialText[_tutorialIndex].text;
             }

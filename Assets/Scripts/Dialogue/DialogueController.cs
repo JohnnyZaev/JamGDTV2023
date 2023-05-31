@@ -68,6 +68,7 @@ namespace Dialogue
 
         public void StartDialogue(DialogueBase dialogue)
         {
+            starterDialogue = dialogue;
             StartCoroutine(Talk(dialogue));
         }
 

@@ -1256,6 +1256,7 @@ MonoBehaviour:
   - {fileID: 9150082203001922424, guid: 121569be3781d4b4a89cd48e4feaa2e1, type: 3}
   - {fileID: 9150082203001922424, guid: df3e3531443d37d4e80e86df7a4d9be7, type: 3}
   tutorialArea: {fileID: 1284659501}
+  changeTutorialPositionAmount: 250
 --- !u!4 &652703023
 Transform:
   m_ObjectHideFlags: 0
@@ -1306,6 +1307,7 @@ MonoBehaviour:
   timerStart: 780
   goodEndingSparkles: 0
   maxLevels: 0
+  timerEndDialogue: {fileID: 11400000, guid: 9451e8d66a95af44da8543ad6a495231, type: 2}
   onEndGame:
     m_PersistentCalls:
       m_Calls: []
@@ -1325,6 +1327,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284659500}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 112129408}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3381,6 +3395,11 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5522584050789414900, guid: cc12a27af07f81e4baec7957ede35cba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7396737868003666744, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
       propertyPath: workShops
@@ -3844,6 +3863,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1550570855}
     m_Modifications:
+    - target: {fileID: 6618097802590454944, guid: 476d582dd3d10d74aa61f355ab21d6e6,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6618097802590454974, guid: 476d582dd3d10d74aa61f355ab21d6e6,
         type: 3}
       propertyPath: m_Pivot.x
