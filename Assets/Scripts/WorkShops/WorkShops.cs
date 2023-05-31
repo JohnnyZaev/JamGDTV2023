@@ -12,7 +12,6 @@ namespace Workshops
         [SerializeField] private WorkshopInfo[] _workshops;
         [SerializeField] private UnityEvent onWorkshopChanged;
         private WorkshopInfo _activeWorkshop;
-        private int index = 0;
         private SparkleManager _sparkleManager;
         
         [Serializable]

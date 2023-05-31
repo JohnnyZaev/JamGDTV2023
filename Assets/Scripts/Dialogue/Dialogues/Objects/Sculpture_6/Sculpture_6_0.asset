@@ -16,10 +16,11 @@ MonoBehaviour:
     hasValue: 1
     value: 0.08
   hasNextDialogue:
-    hasValue: 0
-    value: {fileID: 0}
+    hasValue: 1
+    value: {fileID: 11400000, guid: 13fecd95878825f41afa50cda5234754, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   isBubbleType: 1
   isPausingGame: 0
+  isEndGameDialogue: 0
   text: Completed! It's completed, oh, dear, I've finished it!

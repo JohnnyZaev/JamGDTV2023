@@ -1,7 +1,6 @@
 using Dialogue;
 using Input;
 using Player;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,7 +12,6 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private float changeTutorialPositionAmount;
     private SparkleManager _sparkleManager;
     private int  _tutorialIndex = 0;
-    private bool _isBubleClicked = false;
     private bool _isTimelineClicked = false;
     private bool _isItemClicked = false;
     private bool _isSculptureClicked = false;
@@ -95,11 +93,6 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
-    }
-
-    public void ClickBuble()
-    {
-        _isBubleClicked = true;
     }
 
     public void ClickTimeline()

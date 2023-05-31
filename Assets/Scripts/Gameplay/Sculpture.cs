@@ -26,7 +26,6 @@ namespace Gameplay
         private GameInfo.GameInfo _gameInfo;
         private int _dialogueStage = 0;
         private SparkleManager _sparkleManager;
-        private int _collectedSparkles = 0;
 
         private void Awake()
         {

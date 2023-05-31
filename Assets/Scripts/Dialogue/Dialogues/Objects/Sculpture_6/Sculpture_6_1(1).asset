@@ -17,9 +17,10 @@ MonoBehaviour:
     value: 0.08
   hasNextDialogue:
     hasValue: 1
-    value: {fileID: 0}
+    value: {fileID: 11400000, guid: 72e8862ea910cc54e9023652ab091593, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   isBubbleType: 1
   isPausingGame: 0
+  isEndGameDialogue: 0
   text: ' How strange. I no longer struggle to recall.'

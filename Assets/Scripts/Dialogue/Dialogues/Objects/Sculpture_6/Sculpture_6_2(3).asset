@@ -22,4 +22,5 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   isBubbleType: 1
   isPausingGame: 0
+  isEndGameDialogue: 1
   text: It's... yes, now it is good time to go.
