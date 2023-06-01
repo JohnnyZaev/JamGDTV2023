@@ -34,7 +34,6 @@ namespace Workshops
 
         public void ChangeWorkShop(int index)
         {
-            Debug.Log(index);
             if (_activeWorkshop.WorkShop == _workshops[index].WorkShop) return;
             if (_activeWorkshop.WorkShop == _workshops[0].WorkShop && _sparkleManager.Sparkles == _sparkleManager.maxSparkles) return;
             onWorkshopChanged.Invoke();
