@@ -12,6 +12,7 @@ namespace Gameplay.Interactions
         [SerializeField] CamerSettings  cameraZoomSettings;
         [SerializeField] CamerSettings cameraOriginPostion;
         [SerializeField] GameObject uiTimeLine;
+        [SerializeField] GameObject pointLight;
         [SerializeField] private DialogueBase[] dialogue;
         public UnityEvent OnSuccess { get; set; }
         public UnityEvent OnFailure { get; set; }
@@ -37,6 +38,7 @@ namespace Gameplay.Interactions
         }
         void IInteraction.Start()
         {
+            pointLight.gameObject.SetActive(true);
             _cameraController.Move(sparkle.transform.position);
             _cameraController.Zoom(cameraZoomSettings.zoom, cameraZoomSettings.zoomSpeed);
             _cameraController.Blur(true);
@@ -48,6 +50,7 @@ namespace Gameplay.Interactions
 
         public void ExitZoom()
         {
+            pointLight.gameObject.SetActive(false);
             _cameraController.Move(_cameraOriginPosition);
             _cameraController.Zoom(cameraOriginPostion.zoom, cameraOriginPostion.zoomSpeed);
             _cameraController.Blur(false);

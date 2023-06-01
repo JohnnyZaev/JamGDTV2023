@@ -49,7 +49,19 @@ namespace Workshops
             else
             {
                 currentTimeLight.gameObject.SetActive(true);
-                currentTimeLight.gameObject.SetActive(false);
+                pastLight.gameObject.SetActive(false);
+                _sparkleManager.HasEmission = false;
+            }
+        }
+
+        public void SparkleAdded(int workshopIndex)
+        {
+            _workshops[workshopIndex].sparklesLeft -= 1;
+
+            if (_workshops[workshopIndex].sparklesLeft == 0)
+            {
+                currentTimeLight.gameObject.SetActive(true);
+                pastLight.gameObject.SetActive(false);
                 _sparkleManager.HasEmission = false;
             }
         }
