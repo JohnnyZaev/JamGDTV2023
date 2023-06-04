@@ -2175,7 +2175,7 @@ MonoBehaviour:
   - {fileID: 9150082203001922424, guid: 121569be3781d4b4a89cd48e4feaa2e1, type: 3}
   - {fileID: 9150082203001922424, guid: df3e3531443d37d4e80e86df7a4d9be7, type: 3}
   tutorialArea: {fileID: 1284659501}
-  changeTutorialPositionAmount: 250
+  changeTutorialPositionAmount: 0
 --- !u!4 &652703023
 Transform:
   m_ObjectHideFlags: 0
@@ -2232,7 +2232,7 @@ MonoBehaviour:
   timerStart: 780
   goodEndingSparkles: 0
   maxLevels: 0
-  timerEndDialogue: {fileID: 11400000, guid: 9451e8d66a95af44da8543ad6a495231, type: 2}
+  timerEndDialogue: {fileID: 0}
   onEndGame:
     m_PersistentCalls:
       m_Calls:
@@ -2310,7 +2310,7 @@ MonoBehaviour:
   cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
     type: 2}
   uiTimeLine: {fileID: 112129408}
-  pointLight: {fileID: 1991334997}
+  pointLight: {fileID: 0}
   dialogue:
   - {fileID: 11400000, guid: ad5f510756da5624b956fd9c7c776069, type: 2}
   - {fileID: 11400000, guid: 880955203c5a53e4d8792c10503d04ee, type: 2}
@@ -3210,7 +3210,7 @@ MonoBehaviour:
   m_text: volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5478,7 +5478,7 @@ MonoBehaviour:
   cameraOriginPostion: {fileID: 11400000, guid: f0e62585866198e4b9747f0aa7b3bca4,
     type: 2}
   uiTimeLine: {fileID: 112129408}
-  pointLight: {fileID: 1587665976}
+  pointLight: {fileID: 0}
   dialogue:
   - {fileID: 11400000, guid: 656947b5e7d1c094b97418a1d22b203e, type: 2}
   - {fileID: 11400000, guid: bda240447ed26da44b88a497e7ab286e, type: 2}
@@ -5648,7 +5648,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

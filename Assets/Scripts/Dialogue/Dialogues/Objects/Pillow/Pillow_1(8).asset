@@ -18,7 +18,7 @@ MonoBehaviour:
   hasNextDialogue:
     hasValue: 1
     value: {fileID: 11400000, guid: b5b5b08f6e7500c47a1c857c05eca9dc, type: 2}
-  textColor: {r: 0, g: 0, b: 0, a: 1}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 0}
   isBubbleType: 0
   isPausingGame: 0
