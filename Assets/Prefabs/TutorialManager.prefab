@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7679460679831855539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7679460679831855537}
+  - component: {fileID: 7679460679831855536}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7679460679831855537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679460679831855539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7679460679831855536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679460679831855539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6ee08f31cdfb34782cccefa80ce510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialText:
+  - {fileID: 9150082203001922424, guid: b2eefe7680da4bf45af75883926928e2, type: 3}
+  - {fileID: 9150082203001922424, guid: cb67e243d3f6a83468042e22a5530461, type: 3}
+  - {fileID: 9150082203001922424, guid: 4b593c496ff74e149be62f46dca2afe5, type: 3}
+  - {fileID: 9150082203001922424, guid: e6d4f1643895c824c9512845484e0948, type: 3}
+  - {fileID: 9150082203001922424, guid: f2ca547b6d8d436449e5f783571b1318, type: 3}
+  - {fileID: 9150082203001922424, guid: 121569be3781d4b4a89cd48e4feaa2e1, type: 3}
+  - {fileID: 9150082203001922424, guid: df3e3531443d37d4e80e86df7a4d9be7, type: 3}
+  tutorialArea: {fileID: 0}
+  changeTutorialPositionAmount: 300

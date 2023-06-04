@@ -104,7 +104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47b428d85d6d46342bd361bfe7f505c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40707994f5223384e98fe719f0a50e72, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041B\u0435\u0439\u0441\u043D\u0430 - F\n\n\u0421\u043E\u043D\u044F\n\n\u0415\u043A\u0430\u0442\u0435\u0440\u0438\u043D\u0430
-    - reafreak\n\n\u041C\u0438\u0445\u0430\u0438\u043B - Ferundal\n\u0415\u0432\u0433\u0435\u043D\u0438\u0439\n\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D
-    - god1385"
+  m_text: "\u041B\u0435\u0439\u0441\u043D\u0430 -> @LeysuN713 (tg)\n\n\u0421\u043E\u043D\u044F\n\n\u0415\u043A\u0430\u0442\u0435\u0440\u0438\u043D\u0430
+    -> reafreak\n\n\u041C\u0438\u0445\u0430\u0438\u043B -> Ferundal\n\u0415\u0432\u0433\u0435\u043D\u0438\u0439
+    -> JohnnyZaev\n\u0412\u0430\u043B\u0435\u043D\u0442\u0438\u043D -> god1385"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 40707994f5223384e98fe719f0a50e72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47b428d85d6d46342bd361bfe7f505c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
