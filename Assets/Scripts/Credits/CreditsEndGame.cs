@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class CreditsEndGame : MonoBehaviour
+namespace Credits
 {
-    public void EndGame()
+    public class CreditsEndGame : MonoBehaviour
     {
-        // TODO: delete after tests
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
+        public void EndGame()
+        {
+            Application.Quit();
+        }
     }
 }

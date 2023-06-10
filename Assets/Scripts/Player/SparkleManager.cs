@@ -1,8 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.Serialization;
-using LightType = UnityEngine.LightType;
 
 namespace Player
 {
@@ -132,7 +128,6 @@ namespace Player
         private void UpdateLighting()
         {
             spotLight.spotAngle = 6 + _sparkles * 2;
-            spotLight.shadowAngle = spotLight.shadowAngle;
         }
     }
 }
