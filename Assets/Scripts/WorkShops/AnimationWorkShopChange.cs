@@ -6,10 +6,17 @@ namespace Workshops
     {
         [SerializeField] private WorkShops workShops;
         private int _index;
+        private bool _isSecondSceneActivated = false;
         public void SetIndex(int index)
         {
             transform.gameObject.SetActive(true);
-            _index = index;
+            if (index != 1)
+                _index = index;
+            else
+            {
+                if (_isSecondSceneActivated)
+                    _index = index;
+            }
         }
 
         public void ChangeWorkShop()
@@ -20,6 +27,11 @@ namespace Workshops
         public void TurnOffPanel()
         {
             transform.gameObject.SetActive(false);
+        }
+
+        public void ActivateSecondScene()
+        {
+            _isSecondSceneActivated = true;
         }
     }
 }

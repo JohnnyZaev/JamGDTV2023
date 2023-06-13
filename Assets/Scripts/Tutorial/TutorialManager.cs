@@ -4,12 +4,14 @@ using Player;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private List<TextMeshProUGUI> tutorialText;
     [SerializeField] private TextMeshProUGUI tutorialArea;
     [SerializeField] private float changeTutorialPositionAmount;
+    [SerializeField] private UnityEvent tutorialEnded;
     private SparkleManager _sparkleManager;
     private int  _tutorialIndex = 0;
     private bool _isTimelineClicked = false;
@@ -89,6 +91,7 @@ public class TutorialManager : MonoBehaviour
         {
             if (InputManager.Instance.LeftMouseButtonInput)
             {
+                tutorialEnded.Invoke();
                 tutorialArea.gameObject.SetActive(false);
             }
         }
