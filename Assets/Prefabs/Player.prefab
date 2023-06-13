@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1669560791}
   - component: {fileID: 782787770}
   - component: {fileID: 1112451352664750858}
+  - component: {fileID: 7166629807750322423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -233,14 +234,14 @@ MonoBehaviour:
   timerTextField: {fileID: 0}
   timerStart: 780
   goodEndingSparkles: 0
-  maxLevels: 0
-  timerEndDialogue: {fileID: 0}
   onEndGame:
     m_PersistentCalls:
       m_Calls: []
   startGame:
     m_PersistentCalls:
       m_Calls: []
+  maxLevels: 0
+  timerEndDialogue: {fileID: 0}
 --- !u!114 &1112451352664750858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +279,78 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1112451352664750858}
+        m_TargetAssemblyTypeName: GameInfo.GameInfo, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &7166629807750322423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435697978689315102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db753e70a0a9992499d15b7234012763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelsCompleted: 0
+  timerTextField: {fileID: 0}
+  timerStart: 780
+  goodEndingSparkles: 0
+  maxLevels: 0
+  timerEndDialogue: {fileID: 0}
+  onEndGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  startGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7166629807750322423}
         m_TargetAssemblyTypeName: GameInfo.GameInfo, Assembly-CSharp
         m_MethodName: StartTimer
         m_Mode: 1

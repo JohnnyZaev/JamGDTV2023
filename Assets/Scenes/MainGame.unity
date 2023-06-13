@@ -4233,21 +4233,24 @@ PrefabInstance:
     - target: {fileID: 4444340497089549502, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
       propertyPath: m_text
-      value: 'Leysan -> F
+      value: 'Leysan -> @LeysuN713 [Telegram]
 
 
-        Sonya
+        Sonya -> Arietuno#1817 [Discord]
 
 
-        Ekaterina -> reafreak
+        Ekaterina
+        -> reafreak#2081 [Discord]
 
 
-        Michail
-        -> Ferundal
+        Michail -> ferundal [Discord]
 
-        Evgenii -> JohnnyZaev
+        Valentin
+        -> god1385 [Discord]
 
-        Valentin -> god1385'
+        Evgenii -> johnnyzaev [LinkedIn]
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5071441715956076613, guid: cc12a27af07f81e4baec7957ede35cba,
         type: 3}
@@ -4753,11 +4756,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1435697978689315100, guid: 51196b517bb2aae4b910c6591b69f973,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435697978689315100, guid: 51196b517bb2aae4b910c6591b69f973,
-        type: 3}
       propertyPath: m_LocalScale.z
       value: 1.6000006
       objectReference: {fileID: 0}
@@ -4816,6 +4814,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7166629807750322423, guid: 51196b517bb2aae4b910c6591b69f973,
+        type: 3}
+      propertyPath: timerTextField
+      value: 
+      objectReference: {fileID: 342494950}
+    - target: {fileID: 7166629807750322423, guid: 51196b517bb2aae4b910c6591b69f973,
+        type: 3}
+      propertyPath: onEndGame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 736499959}
+    - target: {fileID: 7166629807750322423, guid: 51196b517bb2aae4b910c6591b69f973,
+        type: 3}
+      propertyPath: startGame.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1284659500}
+    - target: {fileID: 7166629807750322423, guid: 51196b517bb2aae4b910c6591b69f973,
+        type: 3}
+      propertyPath: startGame.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 112129408}
     m_RemovedComponents:
     - {fileID: 782787770, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51196b517bb2aae4b910c6591b69f973, type: 3}

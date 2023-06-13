@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using Attributes;
-using Unity.VisualScripting;
 
 namespace Gameplay
 {
