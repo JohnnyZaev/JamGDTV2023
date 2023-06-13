@@ -22,17 +22,20 @@ namespace Gameplay.Interactions
         private CameraController.CameraController _cameraController;
         private bool isZoomActive;
         private Vector3 _cameraOriginPosition;
+        private TutorialManager _tutorialManager;
 
         private void Awake()
         {
             _cameraController = FindObjectOfType<CameraController.CameraController>();
             _cameraOriginPosition = _cameraController.transform.position;
+            _tutorialManager = FindObjectOfType<TutorialManager>();
         }
 
         private void Update()
         {
            if (InputManager.Instance.LeftMouseButtonInput && isZoomActive && !DialogueController.Instance.IsDialogueRunning)
             {
+                _tutorialManager.ZoomedOut();
                 ExitZoom();
             }
         }

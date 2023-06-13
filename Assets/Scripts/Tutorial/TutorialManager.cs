@@ -17,6 +17,7 @@ public class TutorialManager : MonoBehaviour
     private bool _isTimelineClicked = false;
     private bool _isItemClicked = false;
     private bool _isSculptureClicked = false;
+    private bool _isZoomedOut = false;
 
     private void Awake()
     {
@@ -60,20 +61,26 @@ public class TutorialManager : MonoBehaviour
         {
             if (InputManager.Instance.LeftMouseButtonInput)
             {
+                _tutorialIndex++;
+                tutorialArea.text = tutorialText[_tutorialIndex].text;
+                _isItemClicked = false;
+                tutorialArea.gameObject.transform.parent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, changeTutorialPositionAmount);
+                tutorialArea.gameObject.SetActive(false);
+            }
+        }
+        else if (_tutorialIndex == 4)
+        {
+            if (_isZoomedOut)
+            {
+                tutorialArea.gameObject.SetActive(true);
+            }
+            if (_isItemClicked)
+            {
                 tutorialArea.gameObject.SetActive(false);
             }
             if (_sparkleManager.Sparkles == 3)
             {
                 tutorialArea.gameObject.SetActive(true);
-                tutorialArea.gameObject.transform.parent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, changeTutorialPositionAmount);
-                _tutorialIndex++;
-                tutorialArea.text = tutorialText[_tutorialIndex].text;
-            }
-        }
-        else if (_tutorialIndex == 4)
-        {
-            if (InputManager.Instance.LeftMouseButtonInput)
-            {
                 _tutorialIndex++;
                 tutorialArea.text = tutorialText[_tutorialIndex].text;
             }
@@ -110,5 +117,10 @@ public class TutorialManager : MonoBehaviour
     public void ClickSculpture()
     {
         _isSculptureClicked = true;
+    }
+
+    public void ZoomedOut()
+    {
+       _isZoomedOut = true;
     }
 }
