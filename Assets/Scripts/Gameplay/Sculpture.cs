@@ -43,17 +43,21 @@ namespace Gameplay
         {
             if (currentStage >= sculptureStages.Length - 1) return;
 
-            if (_sparkleManager.Sparkles < 1)
-            {
-                return;
-            }
-
             _tutorialManager.ClickSculpture();
-            --_sparkleManager.Sparkles;
-            sculptureStages[currentStage].sculptureView.SetActive(false);
-            ++currentStage;
-            sculptureStages[currentStage].sculptureView.SetActive(true);
+            
+            if (_sparkleManager.Sparkles > 0)
+            {
+                --_sparkleManager.Sparkles;
+                sculptureStages[currentStage].sculptureView.SetActive(false);
+                ++currentStage;
+                sculptureStages[currentStage].sculptureView.SetActive(true);
+                _dialogueStage = 0;
+            }
             DialogueController.Instance.StartDialogue(sculptureStages[currentStage].dialogues[_dialogueStage]);
+            if (_dialogueStage < sculptureStages[currentStage].dialogues.Length - 1)
+            {
+                ++_dialogueStage;
+            }
         }
     }
 }
