@@ -1,4 +1,6 @@
+using Dialogue;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -10,6 +12,8 @@ namespace Player
         [SerializeField] private GameObject player;
         
         [SerializeField] private Light spotLight;
+        
+        [SerializeField] private DialogueBase sparklesFullDialogue;
 
         private CollectedSparkle[] _visualCollectedSparkles;
         
@@ -22,6 +26,7 @@ namespace Player
         private static readonly int EmissiveColorName = Shader.PropertyToID("_EmissionColor");
 
         private Workshops.WorkShops _workshops;
+        private DialogueController _dialogueController;
         
         private int _sparkles;
 
@@ -46,6 +51,7 @@ namespace Player
                 if (_sparkles == maxSparkles)
                 {
                     _workshops.ChangeWorkShop(0);
+                    _dialogueController.StartDialogue(sparklesFullDialogue);
                 }
             }
         }
