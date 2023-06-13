@@ -5,18 +5,13 @@ namespace Workshops
     public class AnimationWorkShopChange : MonoBehaviour
     {
         [SerializeField] private WorkShops workShops;
+        [SerializeField] private Animator animator;
         private int _index;
-        private bool _isSecondSceneActivated = false;
         public void SetIndex(int index)
         {
             transform.gameObject.SetActive(true);
-            if (index != 1)
-                _index = index;
-            else
-            {
-                if (_isSecondSceneActivated)
-                    _index = index;
-            }
+            animator.SetTrigger("Blackout");
+            _index = index;
         }
 
         public void ChangeWorkShop()
@@ -27,11 +22,6 @@ namespace Workshops
         public void TurnOffPanel()
         {
             transform.gameObject.SetActive(false);
-        }
-
-        public void ActivateSecondScene()
-        {
-            _isSecondSceneActivated = true;
         }
     }
 }

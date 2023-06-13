@@ -60,21 +60,20 @@ public class TutorialManager : MonoBehaviour
         {
             if (InputManager.Instance.LeftMouseButtonInput)
             {
-                _tutorialIndex++;
-                tutorialArea.text = tutorialText[_tutorialIndex].text;
-                _isItemClicked = false;
-            }
-        }
-        else if (_tutorialIndex == 4)
-        {
-            if (_isItemClicked)
-            {
                 tutorialArea.gameObject.SetActive(false);
             }
             if (_sparkleManager.Sparkles == 3)
             {
                 tutorialArea.gameObject.SetActive(true);
                 tutorialArea.gameObject.transform.parent.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, changeTutorialPositionAmount);
+                _tutorialIndex++;
+                tutorialArea.text = tutorialText[_tutorialIndex].text;
+            }
+        }
+        else if (_tutorialIndex == 4)
+        {
+            if (InputManager.Instance.LeftMouseButtonInput)
+            {
                 _tutorialIndex++;
                 tutorialArea.text = tutorialText[_tutorialIndex].text;
             }
